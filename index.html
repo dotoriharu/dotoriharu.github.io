@@ -433,6 +433,46 @@
   .sync button{margin-left:auto;font-size:10.5px;font-weight:800;color:#5FB995;white-space:nowrap}
   .rec-badge.auto{color:#3F7C64;background:var(--mint-soft);border-color:#CBEDDD}
 
+  /* ===== hall of fame (역대 기록 랭킹) ===== */
+  .hall-grid{display:grid;gap:8px}
+  .hall-item{
+    display:flex;align-items:center;gap:10px;border-radius:19px;padding:11px 12px;
+    border:2px solid #F7F1E4;background:#FFFDF7;
+  }
+  .hall-item .h-emo{
+    flex:0 0 36px;width:36px;height:36px;border-radius:13px;display:flex;align-items:center;justify-content:center;
+    font-size:18px;line-height:1;background:var(--mint-soft);color:#4E9078;
+  }
+  .hall-item .h-emo .ic{width:19px;height:19px}
+  .hall-item .h-body{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+  .hall-item .h-lbl{font-size:10px;font-weight:800;color:#9A8A79;letter-spacing:-.2px;display:flex;align-items:center;gap:4px}
+  .hall-item .h-lbl em{
+    font-style:normal;font-size:8.5px;font-weight:800;color:#C4745E;background:var(--peach-soft);
+    border-radius:8px;padding:1px 5px;letter-spacing:-.1px;
+  }
+  .hall-item .h-big{font-family:var(--font-cute);font-size:17px;font-weight:800;color:#3F7C64;letter-spacing:-.6px;line-height:1.2}
+  .hall-item .h-big b{font-family:var(--font-display);font-size:21px;font-weight:800;letter-spacing:-.8px;margin-right:1px}
+  .hall-item .h-sub{font-size:10px;font-weight:700;color:#A89786;letter-spacing:-.2px;line-height:1.45;word-break:keep-all}
+  .hall-item.gold{background:#FFFBEC;border-color:#F6EBC8}
+  .hall-item.gold .h-emo{background:#FDF0CE}
+  .hall-item.gold .h-big{color:#B08432}
+  .hall-item.flame{background:#FFF8F5;border-color:#FBE6DE}
+  .hall-item.flame .h-emo{background:#FFE7DF}
+  .hall-item.flame .h-big{color:#C9705C}
+  .hall-item.mint .h-emo{background:#E7F7EF}
+  .hall-empty{font-size:11.5px;font-weight:700;color:#B3A491;text-align:center;line-height:1.7;padding:12px 0}
+  .hall-foot{margin:10px 0 0;font-size:10px;font-weight:700;color:#B3A491;text-align:center;line-height:1.6;letter-spacing:-.2px}
+
+  /* ===== recycle : 찾기 / 더 보기 ===== */
+  .rc-search{position:relative;margin:0 0 9px}
+  .rc-search .ic{position:absolute;left:11px;top:50%;transform:translateY(-50%);width:15px;height:15px;color:#C3B7A6}
+  .rc-search input{
+    width:100%;min-height:42px;border-radius:14px;border:2px solid var(--line);background:#FFFEF9;
+    padding:0 12px 0 34px;font-family:var(--font-body);font-size:12.5px;font-weight:700;color:var(--ink);
+  }
+  .rc-search input::placeholder{color:#C3B7A6;font-weight:700}
+  .rc-search input:focus{border-color:#BFE9D5;outline:none}
+
   /* ===== recycle board ===== */
   .rc-hero{
     position:relative;overflow:hidden;border-radius:24px;padding:14px 15px;margin-bottom:12px;
@@ -692,6 +732,15 @@
       <path d="M8.4 10.4V8.2a3.6 3.6 0 0 1 7-1.2" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>
       <circle cx="12" cy="15.2" r="1.3" fill="currentColor"/>
     </symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24">
+      <path d="M7.6 4.4h8.8v4.4a4.4 4.4 0 0 1-8.8 0z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/>
+      <path d="M7.6 5.8H5v1.7a2.9 2.9 0 0 0 2.6 2.8M16.4 5.8H19v1.7a2.9 2.9 0 0 1-2.6 2.8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+      <path d="M12 13.2v3.4M9.8 20.2h4.4M9.6 16.6h4.8" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-search" viewBox="0 0 24 24">
+      <circle cx="10.8" cy="10.8" r="6.2" fill="none" stroke="currentColor" stroke-width="1.9"/>
+      <path d="M15.4 15.4 20 20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>
+    </symbol>
     <symbol id="i-del" viewBox="0 0 24 24">
       <path d="M9.6 5.8h8.8a2.8 2.8 0 0 1 2.8 2.8v6.8a2.8 2.8 0 0 1-2.8 2.8H9.6L3.6 12z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/>
       <path d="M12.8 9.9l4 4.2M16.8 9.9l-4 4.2" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>
@@ -770,6 +819,15 @@
           <span><i class="sw" style="background:#A5E3C4"></i>3+</span>
           <span style="margin-left:auto">날짜를 누르면 고칠 수 있어요</span>
         </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <h2><span class="hd-ic butter"><svg class="ic"><use href="#i-trophy"></use></svg></span>명예의 전당</h2>
+          <span class="sub" id="hallTotal"></span>
+        </div>
+        <div class="hall-grid" id="hallGrid"></div>
+        <p class="hall-foot" id="hallFoot"></p>
       </div>
 
       <div class="notice" id="sampleNotice">
@@ -1003,7 +1061,12 @@
             <h2><span class="hd-ic"><svg class="ic"><use href="#i-remake"></use></svg></span>재활용 목록</h2>
             <span class="sub" id="rcCount"></span>
           </div>
+          <div class="rc-search">
+            <svg class="ic"><use href="#i-search"></use></svg>
+            <input type="text" id="rcSearch" placeholder="제목으로 찾기 (예: 순천, 다이소)" autocomplete="off">
+          </div>
           <div id="rcList"></div>
+          <button class="btn btn-ghost btn-sm btn-block" id="rcMore" style="margin-top:8px" hidden>더 보기</button>
           <button class="btn btn-ghost btn-sm btn-block" id="rcRestore" style="margin-top:8px" hidden>숨긴 자동 글 되돌리기</button>
         </div>
 
@@ -1100,7 +1163,7 @@
   </main>
 
   <p class="foot-sprout"><svg class="ic"><use href="#i-sprout"></use></svg></p>
-  <p class="footer-note">도토리하루 매니저 v1 · 기록은 이 기기 브라우저에만 저장돼요</p>
+  <p class="footer-note">도토리하루 매니저 v1.3 · 기록은 이 기기 브라우저에만 저장돼요</p>
 </div>
 
 <nav class="tabbar">
@@ -1345,12 +1408,107 @@
     writeLS(KEY.posts, posts);
     renderPostCard();
     renderCalendar();
+    renderHall();
   }
   function sumPosts(from, to){
     let s = 0;
     const d = new Date(from.getTime());
     while (d <= to) { s += postsOn(isoOf(d)); d.setDate(d.getDate() + 1); }
     return s;
+  }
+
+  /* ---------- 역대 기록 랭킹(명예의 전당) ---------- */
+  const dayNum = s => new Date(s + 'T00:00:00').getTime();
+  const mDot = d => Number(d.slice(5, 7)) + '.' + d.slice(8, 10);
+  const yDot = d => d.slice(0, 4) + '.' + d.slice(5, 7) + '.' + d.slice(8, 10);
+
+  function postDates(){
+    const set = {};
+    Object.keys(AUTO.posts).forEach(d => { if (num(AUTO.posts[d]) > 0) set[d] = 1; });
+    Object.keys(posts).forEach(d => { if (num(posts[d]) > 0) set[d] = 1; });
+    return Object.keys(set).filter(d => /^\d{4}-\d{2}-\d{2}$/.test(d)).sort();
+  }
+
+  function hallStats(){
+    const ds = postDates();
+    if (!ds.length) return null;
+    let total = 0, bestDay = 0, bestDays = [], longest = { len: 0, start: '', end: '' };
+    const months = {};
+    let run = 0, runStart = '';
+    for (let i = 0; i < ds.length; i++) {
+      const d = ds[i], c = postsOn(d);
+      total += c;
+      const mk = d.slice(0, 7);
+      months[mk] = (months[mk] || 0) + c;
+      if (c > bestDay) { bestDay = c; bestDays = [d]; }
+      else if (c === bestDay && c > 0) bestDays.push(d);
+      if (i > 0 && dayNum(d) - dayNum(ds[i - 1]) === 86400000) run++;
+      else { run = 1; runStart = d; }
+      if (run > longest.len) longest = { len: run, start: runStart, end: d };
+    }
+    let bestMonth = '', bestMonthN = 0;
+    Object.keys(months).forEach(m => { if (months[m] > bestMonthN) { bestMonthN = months[m]; bestMonth = m; } });
+
+    let now = 0;
+    const w = new Date(TODAY + 'T00:00:00');
+    if (!postsOn(isoOf(w))) w.setDate(w.getDate() - 1);
+    while (postsOn(isoOf(w)) > 0) { now++; w.setDate(w.getDate() - 1); }
+
+    return {
+      total: total, days: ds.length, bestDay: bestDay, bestDays: bestDays.slice().reverse(),
+      longest: longest, bestMonth: bestMonth, bestMonthN: bestMonthN,
+      now: now, monthNow: months[TODAY.slice(0, 7)] || 0, first: ds[0], last: ds[ds.length - 1]
+    };
+  }
+
+  function renderHall(){
+    const box = $('#hallGrid');
+    if (!box) return;
+    const st = hallStats();
+    const sub = $('#hallTotal'), foot = $('#hallFoot');
+    if (!st) {
+      box.innerHTML = '<div class="hall-empty">블로그 기록이 모이면<br>역대 기록을 세워 드릴게요 🌰</div>';
+      sub.textContent = '';
+      foot.textContent = '';
+      return;
+    }
+    sub.textContent = '역대 ' + st.total + '편';
+
+    /* 🏆 하루 최고 — 동률이면 가장 최근 날짜를 대표로, 나머지는 날짜로 나열 */
+    const tieN = st.bestDays.length - 1;
+    const dayName = WEEKDAYS[new Date(st.bestDays[0] + 'T00:00:00').getDay()];
+    const daySub = tieN > 0
+      ? st.bestDays.map(mDot).join(' · ') + ' (같은 기록)'
+      : yDot(st.bestDays[0]) + ' (' + dayName + ')';
+
+    /* 🔥 최장 연속 — 지금도 이어지고 있으면 '진행 중' */
+    const onGoing = st.now > 0 && st.now === st.longest.len;
+    const streakSub = yDot(st.longest.start) + ' ~ ' + yDot(st.longest.end);
+
+    /* 📅 최고 한 달 */
+    const mm = Number(st.bestMonth.slice(5, 7));
+    const monSub = '하루 평균 ' + (st.bestMonthN / new Date(Number(st.bestMonth.slice(0, 4)), mm, 0).getDate()).toFixed(1) + '편';
+
+    const item = (cls, emo, label, tag, big, small) =>
+      '<div class="hall-item ' + cls + '">' +
+        '<span class="h-emo">' + emo + '</span>' +
+        '<div class="h-body">' +
+          '<span class="h-lbl">' + label + (tag ? ' <em>' + tag + '</em>' : '') + '</span>' +
+          '<span class="h-big">' + big + '</span>' +
+          '<span class="h-sub">' + small + '</span>' +
+        '</div>' +
+      '</div>';
+
+    box.innerHTML =
+      item('gold', '🏆', '하루 최고 기록', tieN > 0 ? '동률 ' + (tieN + 1) + '일' : '',
+        '<b>' + st.bestDay + '</b>개', daySub) +
+      item('flame', '🔥', '최장 연속 기록', onGoing ? '진행 중' : '',
+        '<b>' + st.longest.len + '</b>일 연속', streakSub) +
+      item('mint', '<svg class="ic"><use href="#i-calendar"></use></svg>', '역대 최고 한 달', '',
+        '<b>' + st.bestMonthN + '</b>개', st.bestMonth.slice(0, 4) + '년 ' + mm + '월 · ' + monSub);
+
+    foot.textContent = yDot(st.first) + ' 시작 · 포스팅한 날 ' + st.days + '일' +
+      (st.now ? ' · 지금 ' + st.now + '일 연속' : '');
   }
 
   function dateLabel(d){
@@ -1514,6 +1672,7 @@
     refreshSampleNotice();
     renderPostCard();
     renderCalendar();
+    renderHall();
     if (typeof renderRestoreButton === 'function') renderRestoreButton();
   }
 
@@ -2673,6 +2832,17 @@
   ];
   const rcBool = v => (v === true || v === 'true' || v === 1 || v === '1' || v === 'y' || v === 'Y');
   const rcUrl = s => /^https?:\/\//i.test(String(s || ''));
+  /* 긴 주소는 목록에서 짧게 — blog.naver.com/…/224477685233 처럼 도메인과 글 번호만 */
+  function rcLinkLabel(s){
+    const str = String(s || '');
+    if (!rcUrl(str)) return str;
+    try {
+      const u = new URL(str);
+      const segs = u.pathname.split('/').filter(Boolean);
+      const last = segs.length ? segs[segs.length - 1] : '';
+      return u.host.replace(/^www\./, '') + (last ? '/…/' + last : '');
+    } catch (e) { return str; }
+  }
 
   let recyclePosts = readLS(KEY.recycle, []);
   if (!Array.isArray(recyclePosts)) recyclePosts = [];
@@ -2709,6 +2879,11 @@
   }
   function rcIsAuto(p){ return String(p.id).indexOf('auto:') === 0; }
 
+  /* 최근 30건씩 먼저 보여주고, '더 보기'나 제목 찾기로 나머지를 꺼내 봅니다 (전체 700건대가 한 번에 그려지지 않게) */
+  const RC_PAGE = 30;
+  let rcShow = RC_PAGE;
+  let rcQuery = '';
+
   function renderRecycle(){
     const list = rcAll();
     const perType = { card: 0, thread: 0, reels: 0 };
@@ -2731,7 +2906,6 @@
     $('#rcTypes').innerHTML = RC_TYPES.map(t =>
       '<span class="rc-type">' + t.label + ' <b>' + perType[t.key] + '/' + list.length + '</b></span>'
     ).join('');
-    $('#rcCount').textContent = list.length ? list.length + '건' : '';
 
     const autoN = list.filter(rcIsAuto).length;
     const note = $('#rcAutoNote');
@@ -2742,17 +2916,31 @@
     if (!list.length) {
       box.innerHTML = '<div class="empty">아직 등록된 글이 없어요<br>아래 <b>발행한 글 등록</b>에 제목을 넣으면<br>카드뉴스·스레드·릴스 진행을 체크할 수 있어요</div>';
       $('#rcRestore').hidden = rcHidden.length === 0;
+      $('#rcMore').hidden = true;
       return;
     }
 
-    box.innerHTML = list.map(p => {
+    const q = rcQuery.trim().toLowerCase();
+    const shown = q
+      ? list.filter(p => (p.title + ' ' + (p.link || '')).toLowerCase().indexOf(q) >= 0)
+      : list;
+    $('#rcCount').textContent = q ? shown.length + '건 찾음' : list.length + '건';
+
+    if (!shown.length) {
+      box.innerHTML = '<div class="empty">‘' + escapeHtml(rcQuery.trim()) + '’이 들어간 글을 찾지 못했어요<br>다른 단어로 찾아볼까요?</div>';
+      $('#rcMore').hidden = true;
+      $('#rcRestore').hidden = rcHidden.length === 0;
+      return;
+    }
+
+    box.innerHTML = shown.slice(0, rcShow).map(p => {
       const isAuto = rcIsAuto(p);
       const doneN = RC_TYPES.filter(t => p.done[t.key]).length;
       const when = p.date ? Number(p.date.slice(5, 7)) + '.' + Number(p.date.slice(8, 10)) : '날짜 없음';
       let linkHtml = '';
       if (p.link) {
         linkHtml = rcUrl(p.link)
-          ? '<a class="rc-link" href="' + escapeHtml(p.link) + '" target="_blank" rel="noopener noreferrer"><svg class="ic"><use href="#i-link"></use></svg><span>' + escapeHtml(p.link) + '</span></a>'
+          ? '<a class="rc-link" href="' + escapeHtml(p.link) + '" target="_blank" rel="noopener noreferrer"><svg class="ic"><use href="#i-link"></use></svg><span>' + escapeHtml(rcLinkLabel(p.link)) + '</span></a>'
           : '<span class="rc-memo">' + escapeHtml(p.link) + '</span>';
       }
       return '<div class="rc-row' + (doneN === RC_TYPES.length ? ' all' : '') + '" data-rcid="' + escapeHtml(p.id) + '">' +
@@ -2769,6 +2957,10 @@
         ).join('') + '</div>' +
       '</div>';
     }).join('');
+    const rest = shown.length - rcShow;
+    const more = $('#rcMore');
+    more.hidden = rest <= 0;
+    if (rest > 0) more.textContent = '더 보기 · ' + rest + '건 남음';
     $('#rcRestore').hidden = rcHidden.length === 0;
   }
 
@@ -2827,6 +3019,16 @@
     if (tgl) { rcToggle(tgl.getAttribute('data-rctgl'), tgl.getAttribute('data-type')); return; }
     const del = e.target.closest('[data-rcdel]');
     if (del) rcDelete(del);
+  });
+
+  $('#rcMore').addEventListener('click', () => {
+    rcShow += RC_PAGE;
+    renderRecycle();
+  });
+  $('#rcSearch').addEventListener('input', e => {
+    rcQuery = e.target.value || '';
+    rcShow = RC_PAGE;
+    renderRecycle();
   });
 
   $('#rcAdd').addEventListener('click', () => {

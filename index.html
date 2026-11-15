@@ -567,6 +567,100 @@
   .st-result .hint{text-align:center;margin-top:6px}
   a.btn{text-decoration:none}
 
+  /* ===== card news : 여행 동선 입력 ===== */
+  .tl-row{display:grid;grid-template-columns:1fr 1fr 34px;gap:6px;margin-bottom:6px;align-items:center}
+  .tl-row input{
+    width:100%;min-width:0;padding:10px 11px;border:2px solid var(--line);border-radius:14px;
+    background:#FFFEF9;font-size:14px;color:var(--ink);outline:none;transition:.15s;
+  }
+  .tl-row input:focus{border-color:var(--mint);box-shadow:0 0 0 3px rgba(138,216,181,.18);background:#fff}
+  .tl-row input::placeholder{color:#C3B7A6;font-size:11.5px;font-weight:600}
+  .tl-del{
+    width:34px;height:38px;border-radius:12px;background:#FDEBE7;color:#CF5340;
+    display:flex;align-items:center;justify-content:center;flex:0 0 34px;
+  }
+  .tl-del .ic{width:15px;height:15px}
+  .tl-del:active{transform:translateY(1px)}
+  .tl-presets .chip{font-size:11.5px;padding:7px 10px}
+
+  /* ===== media kit / pitch / keyword note / insta monthly ===== */
+  .seg.seg4 button{font-size:11.5px;padding:10px 2px;letter-spacing:-.5px}
+  .kit-hero{
+    position:relative;overflow:hidden;border-radius:24px;padding:14px 15px;margin-bottom:12px;
+    background:linear-gradient(140deg,#FDF2E3 0%,#FCFBEE 54%,#E9F7F0 100%);
+    border:2px solid #F8F1E2;box-shadow:var(--shadow-sm);
+  }
+  .kit-hero .lbl{font-size:10.5px;font-weight:800;color:#A08558;display:flex;align-items:center;gap:5px;letter-spacing:-.1px}
+  .kit-hero .lbl .ic{width:14px;height:14px}
+  .kit-sum{font-family:var(--font-cute);font-size:14.5px;font-weight:800;color:#7A6A4A;letter-spacing:-.5px;margin:5px 0 0;line-height:1.45;word-break:keep-all}
+  .kit-sum b{color:#2F6B54}
+  .kit-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:11px}
+  .kit-fact{background:#FFFFFFC4;border-radius:14px;padding:8px 9px;min-width:0}
+  .kit-fact .k{display:block;font-size:9.5px;font-weight:800;color:#A0917A;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:-.3px}
+  .kit-fact .v{display:block;font-size:13.5px;font-weight:800;color:#2F6B54;font-variant-numeric:tabular-nums;letter-spacing:-.6px;margin-top:2px}
+  #kitPost1,#kitPost2,#kitPost3{margin-bottom:7px}
+  .kit-pickrow{display:flex;gap:6px;margin-top:5px}
+  .kit-pickrow select{
+    flex:1;min-width:0;min-height:42px;padding:0 10px;border-radius:14px;border:2px solid var(--line);
+    background:#FFFEF9;font-family:var(--font-body);font-size:12.5px;font-weight:700;color:var(--ink-2);letter-spacing:-.2px;
+  }
+  #kitCv{display:block;width:100%;height:auto;background:#FFFDF5}
+
+  .pt-hero{
+    position:relative;overflow:hidden;border-radius:24px;padding:14px 15px;margin-bottom:12px;
+    background:linear-gradient(140deg,#FFEDE8 0%,#FFFBEC 56%,#EAF8F1 100%);
+    border:2px solid #FFF4EE;box-shadow:var(--shadow-sm);
+  }
+  .pt-hero .lbl{font-size:10.5px;font-weight:800;color:#B08573;display:flex;align-items:center;gap:5px;letter-spacing:-.1px}
+  .pt-hero .lbl .ic{width:14px;height:14px}
+  .pt-sum{font-family:var(--font-cute);font-size:14.5px;font-weight:800;color:#8C5A4A;letter-spacing:-.5px;margin:5px 0 0;line-height:1.45;word-break:keep-all}
+  .pt-sum b{color:#C4745E}
+  .pt-out{
+    width:100%;border:2px solid #F7F1E4;border-radius:18px;padding:13px;background:#FCFAF1;
+    font-family:var(--font-body);font-size:12.6px;line-height:1.8;color:#5C4B3B;resize:vertical;letter-spacing:-.2px;
+  }
+  #ptShort{min-height:112px}
+  #ptLong{min-height:300px}
+
+  .kw-hero{
+    position:relative;overflow:hidden;border-radius:24px;padding:14px 15px;margin-bottom:12px;
+    background:linear-gradient(140deg,#E9F7F0 0%,#FCFBEE 56%,#FDF2E3 100%);
+    border:2px solid #EFF6E8;box-shadow:var(--shadow-sm);
+  }
+  .kw-hero .lbl{font-size:10.5px;font-weight:800;color:#6F8F7C;display:flex;align-items:center;gap:5px;letter-spacing:-.1px}
+  .kw-hero .lbl .ic{width:14px;height:14px}
+  .kw-sum{font-family:var(--font-cute);font-size:14.5px;font-weight:800;color:#3F6B57;letter-spacing:-.5px;margin:5px 0 0;line-height:1.45;word-break:keep-all}
+  .kw-sum b{color:#2F6B54}
+  .kw-row{border:2px solid #F7F1E4;border-radius:18px;padding:11px 12px;background:#FFFDF7;margin-bottom:9px}
+  .kw-top{display:flex;align-items:center;gap:7px;min-width:0}
+  .kw-rank{
+    flex:0 0 auto;min-width:46px;height:33px;padding:0 9px;border-radius:12px;display:flex;align-items:center;justify-content:center;
+    font-family:var(--font-display);font-synthesis-weight:none;font-size:15px;font-weight:800;color:#9A8A79;background:#F2EEE4;letter-spacing:-.6px;
+  }
+  .kw-rank.top1{background:#FDF0CE;color:#B08432}
+  .kw-rank.top3{background:var(--mint-soft);color:#3F7C64}
+  .kw-rank.out{background:#FDEBE7;color:#C97762;font-family:var(--font-cute);font-size:11px;font-weight:800;letter-spacing:-.3px}
+  .kw-key{flex:1;min-width:0;font-size:13px;font-weight:800;color:var(--ink);letter-spacing:-.3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .kw-post{font-size:11.5px;font-weight:700;color:#7E6B59;margin-top:6px;line-height:1.55;word-break:break-word}
+  .kw-note{font-size:11px;font-weight:700;color:#91806D;margin-top:4px;line-height:1.6;word-break:break-word}
+  .kw-meta{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:10.5px;font-weight:700;color:var(--muted);margin-top:7px}
+  .kw-meta .acts{margin-left:auto;display:flex;gap:5px}
+
+  .ig-row{display:flex;align-items:center;gap:10px;border:2px solid #F7F1E4;border-radius:18px;padding:10px 12px;background:#FFFDF7;margin-bottom:8px}
+  .ig-row.cur{background:#FFF8F5;border-color:#FBE6DE}
+  .ig-left{flex:1;min-width:0}
+  .ig-mon{display:flex;align-items:center;gap:5px;font-size:11.5px;font-weight:800;color:var(--ink-2);letter-spacing:-.3px}
+  .ig-mon em{font-style:normal;font-size:8.5px;font-weight:800;color:#C4745E;background:var(--peach-soft);border-radius:8px;padding:1px 5px;letter-spacing:-.1px}
+  .ig-bar{height:8px;border-radius:99px;background:#F6F0E3;overflow:hidden;margin-top:6px}
+  .ig-bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#C9A98B,#E4CEB8);transition:width .3s}
+  .ig-row.cur .ig-bar i{background:linear-gradient(90deg,#EE9C8C,#FFC7BC)}
+  .ig-right{flex:0 0 auto;text-align:right}
+  .ig-num{font-family:var(--font-display);font-synthesis-weight:none;font-size:19px;font-weight:800;color:#6B4423;letter-spacing:-.8px;font-variant-numeric:tabular-nums;line-height:1.12}
+  .ig-num small{font-family:var(--font-cute);font-size:11px;font-weight:800;color:#A89786;margin-left:1px;letter-spacing:0}
+  .ig-delta{display:block;margin-top:3px;font-size:10px;font-weight:800;color:#B3A491;letter-spacing:-.1px}
+  .ig-delta.up{color:var(--ok)}
+  .ig-delta.down{color:var(--down)}
+
   /* ===== PIN lock ===== */
   .top-acts{display:flex;align-items:center;gap:6px;flex:0 0 auto}
   .lock-btn{
@@ -745,6 +839,12 @@
       <path d="M9.6 5.8h8.8a2.8 2.8 0 0 1 2.8 2.8v6.8a2.8 2.8 0 0 1-2.8 2.8H9.6L3.6 12z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/>
       <path d="M12.8 9.9l4 4.2M16.8 9.9l-4 4.2" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>
     </symbol>
+    <symbol id="i-idcard" viewBox="0 0 24 24">
+      <rect x="2.8" y="5.4" width="18.4" height="13.2" rx="3.6" fill="none" stroke="currentColor" stroke-width="1.9"/>
+      <circle cx="8.2" cy="10.6" r="1.9" fill="none" stroke="currentColor" stroke-width="1.7"/>
+      <path d="M5.4 15.7c.5-1.5 1.5-2.2 2.8-2.2s2.3.7 2.8 2.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+      <path d="M14.4 10.2h3.8M14.4 13.6h3.8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+    </symbol>
   </defs>
 </svg>
 
@@ -854,6 +954,15 @@
 
       <div class="card">
         <div class="card-head">
+          <h2><span class="hd-ic peach"><svg class="ic"><use href="#i-star"></use></svg></span>인스타 팔로워 월별</h2>
+          <span class="sub" id="igMonthCount"></span>
+        </div>
+        <div id="igMonthList"></div>
+        <p class="hint" id="igMonthFoot"></p>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
           <h2><span class="hd-ic peach"><svg class="ic"><use href="#i-note"></use></svg></span>기록</h2>
           <span class="sub" id="recCount"></span>
         </div>
@@ -888,6 +997,12 @@
 
     <!-- ================= TAB 2 : GENERATOR ================= -->
     <section id="panel-generator" class="panel" hidden>
+      <div class="seg" id="genSeg">
+        <button class="is-on" data-gen="tag">제목·태그</button>
+        <button data-gen="keyword">효자 키워드</button>
+      </div>
+
+      <div id="gen-tag">
       <div class="card">
         <div class="card-head"><h2><span class="hd-ic peach"><svg class="ic"><use href="#i-pencil"></use></svg></span>어떤 글인가요</h2></div>
         <div class="chips" id="catChips"></div>
@@ -928,6 +1043,57 @@
       <div class="card">
         <div class="card-head"><h2><span class="hd-ic"><svg class="ic"><use href="#i-check"></use></svg></span>발행 전 서식 체크</h2><span class="sub">도토리하루 기준</span></div>
         <div id="miniCheck"></div>
+      </div>
+      </div>
+
+      <!-- ---------- 효자 키워드 · 검색 순위 노트 ---------- -->
+      <div id="gen-keyword" hidden>
+        <div class="kw-hero">
+          <span class="lbl"><svg class="ic"><use href="#i-search"></use></svg>효자 키워드 · 검색 순위 노트</span>
+          <p class="kw-sum" id="kwSum">공들인 글의 키워드와 순위를 적어 두면 효자 키워드가 보여요</p>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <h2><span class="hd-ic"><svg class="ic"><use href="#i-trend"></use></svg></span>노트</h2>
+            <span class="sub" id="kwCount"></span>
+          </div>
+          <div id="kwList"></div>
+        </div>
+
+        <div class="card" id="kwFormCard">
+          <div class="card-head">
+            <h2><span class="hd-ic peach"><svg class="ic"><use href="#i-plus"></use></svg></span><span id="kwFormTitle">키워드 추가</span></h2>
+            <span class="sub" id="kwFormMode"></span>
+          </div>
+          <div class="field">
+            <label for="kwKey">타겟 키워드</label>
+            <input type="text" id="kwKey" placeholder="예: 천안 카페 추천" autocomplete="off">
+          </div>
+          <div class="two-col">
+            <div class="field" style="margin-bottom:12px">
+              <label for="kwRank">네이버 검색 순위</label>
+              <input type="number" class="input-num" id="kwRank" inputmode="numeric" placeholder="예: 3">
+            </div>
+            <div class="field" style="margin-bottom:12px">
+              <label for="kwDate">확인한 날</label>
+              <input type="date" id="kwDate">
+            </div>
+          </div>
+          <div class="field">
+            <label for="kwPost">공들인 글 <span class="muted" style="font-weight:500">(선택)</span></label>
+            <input type="text" id="kwPost" placeholder="글 제목이나 링크" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="kwMemo">유입 메모 <span class="muted" style="font-weight:500">(선택)</span></label>
+            <textarea id="kwMemo" placeholder="예: 발행 3일 만에 1위, 하루 유입 40명"></textarea>
+          </div>
+          <div class="btn-row">
+            <button class="btn btn-ghost" id="kwCancel" hidden>취소</button>
+            <button class="btn btn-mint" id="kwSave"><svg class="ic"><use href="#i-plus"></use></svg>노트 저장</button>
+          </div>
+          <p class="hint" style="margin-top:10px">순위는 1~30위만 적어도 돼요 · 못 찾으면 비워 두면 순위 밖으로 남아요</p>
+        </div>
       </div>
     </section>
 
@@ -1042,9 +1208,11 @@
     </section>
     <!-- ================= TAB 4 : RECYCLE BOARD / CARD NEWS STUDIO ================= -->
     <section id="panel-recycle" class="panel" hidden>
-      <div class="seg" id="rcSeg">
-        <button class="is-on" data-rc="board">재활용 보드</button>
-        <button data-rc="studio">카드뉴스 만들기</button>
+      <div class="seg seg4" id="rcSeg">
+        <button class="is-on" data-rc="board">재활용</button>
+        <button data-rc="studio">카드뉴스</button>
+        <button data-rc="kit">미디어킷</button>
+        <button data-rc="pitch">신청멘트</button>
       </div>
 
       <!-- ---------- board ---------- -->
@@ -1138,6 +1306,55 @@
             <label for="stTag">하단 태그</label>
             <input type="text" id="stTag" placeholder="@dotori_haru" autocomplete="off">
           </div>
+
+          <!-- ④ 여행 동선 타임라인 입력 -->
+          <div id="stTlBox" hidden>
+            <div class="divider"></div>
+            <div class="field">
+              <label for="stTlCap">상단 작은 문구</label>
+              <input type="text" id="stTlCap" placeholder="예: 낮부터 밤까지" autocomplete="off">
+            </div>
+            <div class="field" style="margin-bottom:9px">
+              <label>동선 <span class="muted" style="font-weight:500">(장소 · 이동은 선택)</span></label>
+              <div id="stTlRows"></div>
+              <button class="btn btn-ghost btn-sm btn-block" id="stTlAdd" style="margin-top:3px"><svg class="ic"><use href="#i-plus"></use></svg>장소 추가</button>
+            </div>
+            <div class="field" style="margin-bottom:0">
+              <label>이동 빠른 입력 <span class="muted" style="font-weight:500">(이동 칸을 누른뒤 칩을 누르면 그대로 들어가요)</span></label>
+              <div class="chips tl-presets" id="stTlPresets"></div>
+            </div>
+            <p class="hint" style="margin-top:9px">장소만 적어도 코스표로 깔끔하게 나와요 · 이동을 적으면 오른쪽에 같이 보여요</p>
+          </div>
+
+          <!-- ⑤ 여행 스팟 체크리스트 입력 -->
+          <div id="stCkBox" hidden>
+            <div class="divider"></div>
+            <div class="field">
+              <label for="stCkIntro">짧은 소개 <span class="muted" style="font-weight:500">(2~3줄)</span></label>
+              <textarea id="stCkIntro" placeholder="혼자만의 시간을 보내기 좋은 소도시라면 충북 제천, 조용한 쉼을 찾아 떠나기 좋은 여행지예요"></textarea>
+            </div>
+            <div class="two-col">
+              <div class="field" style="margin-bottom:12px">
+                <label for="stCkA">왼쪽 목록 제목</label>
+                <input type="text" id="stCkA" placeholder="관광 · 쇼핑 스폿" autocomplete="off">
+              </div>
+              <div class="field" style="margin-bottom:12px">
+                <label for="stCkB">오른쪽 목록 제목</label>
+                <input type="text" id="stCkB" placeholder="카페" autocomplete="off">
+              </div>
+            </div>
+            <div class="two-col">
+              <div class="field" style="margin-bottom:0">
+                <label for="stCkAItems">왼쪽 항목 <span class="muted" style="font-weight:500">(한 줄에 하나)</span></label>
+                <textarea id="stCkAItems" placeholder="안녕,책&#10;책방소설 novella" style="min-height:96px"></textarea>
+              </div>
+              <div class="field" style="margin-bottom:0">
+                <label for="stCkBItems">오른쪽 항목 <span class="muted" style="font-weight:500">(한 줄에 하나)</span></label>
+                <textarea id="stCkBItems" placeholder="관계의미학&#10;기호&#10;리피" style="min-height:96px"></textarea>
+              </div>
+            </div>
+            <p class="hint" style="margin-top:9px">제목 → 큰 제목 · 위 <b>한 줄 요약</b> → 그 위 작은 문구로 들어가요</p>
+          </div>
         </div>
 
         <div class="card">
@@ -1159,11 +1376,104 @@
           </div>
         </div>
       </div>
+      <!-- ---------- media kit ---------- -->
+      <div id="rc-kit" hidden>
+        <div class="kit-hero">
+          <span class="lbl"><svg class="ic"><use href="#i-idcard"></use></svg>도토리하루 미디어 킷 · 포트폴리오 명함</span>
+          <p class="kit-sum" id="kitSum">숫자가 쌓이면 카드에 자동으로 담겨요</p>
+          <div class="kit-facts" id="kitFacts"></div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <h2><span class="hd-ic peach"><svg class="ic"><use href="#i-note"></use></svg></span>카드에 담을 내용</h2>
+            <span class="sub" id="kitAutoNote"></span>
+          </div>
+          <div class="field">
+            <label for="kitTagline">한 줄 소개</label>
+            <input type="text" id="kitTagline" placeholder="충남 아산 · 여행 · 카페 · 맛집 기록" autocomplete="off">
+          </div>
+          <div class="field">
+            <label>주력 카테고리 <span class="muted" style="font-weight:500">(눌러서 빼고 더하기)</span></label>
+            <div class="chips" id="kitCats"></div>
+          </div>
+          <div class="field" style="margin-bottom:0">
+            <label>대표 글 <span class="muted" style="font-weight:500">(최대 3개)</span></label>
+            <input type="text" id="kitPost1" placeholder="예: 순천 1박 2일 뚜벅이 여행" autocomplete="off">
+            <input type="text" id="kitPost2" placeholder="두 번째 대표 글" autocomplete="off">
+            <input type="text" id="kitPost3" placeholder="세 번째 대표 글" autocomplete="off">
+            <div class="kit-pickrow">
+              <select id="kitPick" aria-label="최근 발행 글에서 고르기">
+                <option value="">최근 발행 글에서 고르기</option>
+              </select>
+              <button class="btn btn-ghost btn-sm" id="kitAuto3">최신 3편</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <h2><span class="hd-ic butter"><svg class="ic"><use href="#i-frame"></use></svg></span>미디어 킷 미리보기</h2>
+            <span class="sub">1080 × 1350</span>
+          </div>
+          <div class="cv-box"><canvas id="kitCv" width="1080" height="1350" aria-label="미디어 킷 미리보기"></canvas></div>
+          <p class="cv-note">크림·파스텔 에디토리얼 카드 · 보이는 그대로 PNG로 저장돼요</p>
+          <button class="btn btn-mint btn-block" id="kitSave" style="margin-top:11px"><svg class="ic"><use href="#i-down"></use></svg>미디어 킷 PNG 저장</button>
+          <div class="st-result" id="kitResult" hidden>
+            <img id="kitResultImg" alt="완성된 미디어 킷">
+            <p class="meta" id="kitResultMeta"></p>
+            <p class="hint" id="kitResultHint">아이폰은 아래 이미지를 <b>길게 눌러</b> 사진에 저장을 골라 주세요</p>
+            <div class="btn-row" style="margin-top:9px">
+              <button class="btn btn-ghost btn-sm" id="kitShare" hidden><svg class="ic"><use href="#i-up"></use></svg>공유 시트</button>
+              <a class="btn btn-ghost btn-sm" id="kitDl" href="#" download>다운로드</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---------- 리뷰노트 · 체험단 신청 한마디 ---------- -->
+      <div id="rc-pitch" hidden>
+        <div class="pt-hero">
+          <span class="lbl"><svg class="ic"><use href="#i-sparkle"></use></svg>리뷰노트 · 체험단 신청 한마디</span>
+          <p class="pt-sum" id="ptSum">카테고리를 고르면 신청 문구가 바로 나와요</p>
+        </div>
+
+        <div class="card">
+          <div class="card-head"><h2><span class="hd-ic peach"><svg class="ic"><use href="#i-leaf"></use></svg></span>어떤 체험인가요</h2></div>
+          <div class="chips" id="ptCatChips"></div>
+          <div class="field" style="margin-top:14px">
+            <label>내 강점 <span class="muted" style="font-weight:500">(눌러서 켜고 끄기)</span></label>
+            <div class="chips" id="ptStrengthChips"></div>
+          </div>
+          <div class="field" style="margin-bottom:2px">
+            <label for="ptGoal">한 줄 각오 <span class="muted" style="font-weight:500">(선택)</span></label>
+            <input type="text" id="ptGoal" placeholder="예: 매장 분위기와 메뉴를 꼼꼼히 담아 소개하겠습니다" autocomplete="off">
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <h2><span class="hd-ic"><svg class="ic"><use href="#i-note"></use></svg></span>짧은 버전</h2>
+            <button class="copy-mini" id="ptShortCopy"><svg class="ic ic-xs"><use href="#i-copy"></use></svg>복사</button>
+          </div>
+          <textarea id="ptShort" class="pt-out"></textarea>
+          <p class="hint" style="margin-top:9px">리뷰노트·신청란에 그대로 붙여 넣는 1~2줄 버전이에요</p>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <h2><span class="hd-ic butter"><svg class="ic"><use href="#i-sparkle"></use></svg></span>정성 버전</h2>
+            <button class="copy-mini" id="ptLongCopy"><svg class="ic ic-xs"><use href="#i-copy"></use></svg>복사</button>
+          </div>
+          <textarea id="ptLong" class="pt-out" style="min-height:330px"></textarea>
+          <p class="hint" style="margin-top:9px">숙소·협찬 제안 메일이나 DM에 쓰는 버전이에요 · 별표 없는 깔끔한 텍스트</p>
+        </div>
+      </div>
     </section>
   </main>
 
   <p class="foot-sprout"><svg class="ic"><use href="#i-sprout"></use></svg></p>
-  <p class="footer-note">도토리하루 매니저 v1.3 · 기록은 이 기기 브라우저에만 저장돼요</p>
+  <p class="footer-note">도토리하루 매니저 v1.4 · 기록은 이 기기 브라우저에만 저장돼요</p>
 </div>
 
 <nav class="tabbar">
@@ -1171,7 +1481,7 @@
     <button class="tab-btn is-active" data-tab="tracker"><svg class="ic"><use href="#i-trend"></use></svg>성장 트래커</button>
     <button class="tab-btn" data-tab="generator"><svg class="ic"><use href="#i-pencil"></use></svg>제목·태그</button>
     <button class="tab-btn" data-tab="more"><svg class="ic"><use href="#i-check"></use></svg>체크·캡션</button>
-    <button class="tab-btn" data-tab="recycle"><svg class="ic"><use href="#i-remake"></use></svg>재활용</button>
+    <button class="tab-btn" data-tab="recycle"><svg class="ic"><use href="#i-idcard"></use></svg>포트폴리오</button>
   </div>
 </nav>
 
@@ -1335,7 +1645,11 @@
     rcHidden: 'dotori.recycleHidden.v1',
     rcSeg: 'dotori.recycleSeg.v1',
     studio: 'dotori.studio.v1',
-    lock: 'dotori.lock.v1'
+    lock: 'dotori.lock.v1',
+    kit: 'dotori.mediakit.v1',
+    pitch: 'dotori.pitch.v1',
+    kw: 'dotori.keywords.v1',
+    genSeg: 'dotori.generatorSeg.v1'
   };
   function readLS(key, fallback){
     try {
@@ -1668,6 +1982,7 @@
     renderStats();
     renderMetricChips();
     renderChart();
+    renderIgMonth();
     renderRecords();
     refreshSampleNotice();
     renderPostCard();
@@ -2029,6 +2344,8 @@
     renderSyncLine();
     renderTracker();
     if (typeof renderRecycle === 'function') renderRecycle();
+    if (typeof renderKit === 'function') renderKit();
+    if (typeof renderPitch === 'function') renderPitch();
     if (dayTarget) updateDaySheet();
   }
   $('#syncLine').addEventListener('click', e => {
@@ -2067,8 +2384,24 @@
         font: stFontId,
         title: $('#stTitle').value,
         sub: $('#stSub').value,
-        tag: $('#stTag').value
-      }
+        tag: $('#stTag').value,
+        tlCap: $('#stTlCap').value,
+        tl: stTlRows,
+        ck: {
+          intro: $('#stCkIntro').value,
+          aTitle: $('#stCkA').value,
+          bTitle: $('#stCkB').value,
+          aItems: $('#stCkAItems').value,
+          bItems: $('#stCkBItems').value
+        }
+      },
+      mediaKit: {
+        cats: kitCatsSel.slice(),
+        tagline: $('#kitTagline').value,
+        posts: [1, 2, 3].map(i => $('#kitPost' + i).value)
+      },
+      pitch: { cat: ptCat, on: ptOn, goal: $('#ptGoal').value },
+      keywords: kwNotes
     };
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
@@ -2154,12 +2487,68 @@
           if (typeof data.studio.title === 'string') $('#stTitle').value = data.studio.title;
           if (typeof data.studio.sub === 'string') $('#stSub').value = data.studio.sub;
           if (typeof data.studio.tag === 'string' && data.studio.tag) $('#stTag').value = data.studio.tag;
-          writeLS(KEY.studio, { style: stStyle, font: stFontId, title: $('#stTitle').value, sub: $('#stSub').value, tag: $('#stTag').value }, true);
+          if (typeof data.studio.tlCap === 'string') $('#stTlCap').value = data.studio.tlCap;
+          if (Array.isArray(data.studio.tl)) {
+            stTlRows = data.studio.tl.filter(r => r && typeof r === 'object').slice(0, 7)
+              .map(r => ({ place: String(r.place || ''), move: String(r.move || '') }));
+            while (stTlRows.length < 3) stTlRows.push({ place: '', move: '' });
+          }
+          if (data.studio.ck && typeof data.studio.ck === 'object') {
+            const ck = data.studio.ck;
+            if (typeof ck.intro === 'string') $('#stCkIntro').value = ck.intro;
+            if (typeof ck.aTitle === 'string') $('#stCkA').value = ck.aTitle;
+            if (typeof ck.bTitle === 'string') $('#stCkB').value = ck.bTitle;
+            if (typeof ck.aItems === 'string') $('#stCkAItems').value = ck.aItems;
+            if (typeof ck.bItems === 'string') $('#stCkBItems').value = ck.bItems;
+          }
+          writeLS(KEY.studio, {
+            style: stStyle, font: stFontId,
+            title: $('#stTitle').value, sub: $('#stSub').value, tag: $('#stTag').value,
+            tlCap: $('#stTlCap').value, tl: stTlRows,
+            ck: {
+              intro: $('#stCkIntro').value, aTitle: $('#stCkA').value, bTitle: $('#stCkB').value,
+              aItems: $('#stCkAItems').value, bItems: $('#stCkBItems').value
+            }
+          }, true);
+        }
+        if (data.mediaKit && typeof data.mediaKit === 'object') {
+          if (Array.isArray(data.mediaKit.cats)) {
+            const pick = KIT_CATS.filter(c => data.mediaKit.cats.indexOf(c) >= 0);
+            if (pick.length) kitCatsSel = pick;
+          }
+          if (typeof data.mediaKit.tagline === 'string') $('#kitTagline').value = data.mediaKit.tagline;
+          if (Array.isArray(data.mediaKit.posts)) {
+            [1, 2, 3].forEach(i => { $('#kitPost' + i).value = String(data.mediaKit.posts[i - 1] || ''); });
+          }
+          kitSaveDraft();
+        }
+        if (data.pitch && typeof data.pitch === 'object') {
+          if (PT_CATS.some(c => c.id === data.pitch.cat)) ptCat = data.pitch.cat;
+          if (data.pitch.on && typeof data.pitch.on === 'object') {
+            PT_STRENGTHS.forEach(s => { ptOn[s.id] = data.pitch.on[s.id] !== false; });
+          }
+          if (typeof data.pitch.goal === 'string') $('#ptGoal').value = data.pitch.goal;
+          ptSave();
+        }
+        if (Array.isArray(data.keywords)) {
+          kwNotes = data.keywords.filter(k => k && String(k.keyword || '').trim()).map(k => ({
+            id: k.id || uid(),
+            keyword: String(k.keyword).trim(),
+            rank: num(k.rank) > 0 ? Math.round(num(k.rank)) : 0,
+            post: String(k.post || ''),
+            memo: String(k.memo || ''),
+            date: kitIsDate(k.date) ? String(k.date) : ''
+          }));
+          writeLS(KEY.kw, kwNotes, true);
         }
         renderTracker();
         renderRecycle();
         renderStStyles();
         renderStFonts();
+        renderStTlRows();
+        renderKit();
+        renderPitch();
+        renderKw();
         stLoadFonts();
         renderSponsors();
         spResetForm();
@@ -3059,8 +3448,8 @@
   });
 
   function showRc(name){
-    const target = name === 'studio' ? 'studio' : 'board';
-    ['board', 'studio'].forEach(n => { $('#rc-' + n).hidden = n !== target; });
+    const target = ['board', 'studio', 'kit', 'pitch'].indexOf(name) >= 0 ? name : 'board';
+    ['board', 'studio', 'kit', 'pitch'].forEach(n => { $('#rc-' + n).hidden = n !== target; });
     $$('#rcSeg button').forEach(b => b.classList.toggle('is-on', b.getAttribute('data-rc') === target));
     writeLS(KEY.rcSeg, target, true);
     window.scrollTo(0, 0);
@@ -3069,12 +3458,28 @@
     b.addEventListener('click', () => showRc(b.getAttribute('data-rc')));
   });
 
+  /* ---------- 제목·태그 / 효자 키워드 세그먼트 ---------- */
+  function showGen(name){
+    const target = name === 'keyword' ? 'keyword' : 'tag';
+    ['tag', 'keyword'].forEach(n => { $('#gen-' + n).hidden = n !== target; });
+    $$('#genSeg button').forEach(b => b.classList.toggle('is-on', b.getAttribute('data-gen') === target));
+    writeLS(KEY.genSeg, target, true);
+    window.scrollTo(0, 0);
+  }
+  $$('#genSeg button').forEach(b => {
+    b.addEventListener('click', () => showGen(b.getAttribute('data-gen')));
+  });
+
   /* ================= 미니 카드뉴스 메이커 (Canvas 1080×1350) ================= */
   const ST_STYLES = [
     { id:'magazine', label:'① 매거진 커버' },
     { id:'cream',    label:'② 크림 프레임' },
-    { id:'label',    label:'③ 라벨 포인트' }
+    { id:'label',    label:'③ 라벨 포인트' },
+    { id:'timeline', label:'④ 여행 동선' },
+    { id:'checklist',label:'⑤ 스팟 체크' }
   ];
+  /* ④ 동선 카드의 이동 시간·거리 빠른 입력 칩 */
+  const ST_TL_PRESETS = ['차량 15분', '도보 10분', '버스 20분', '차량 4.2km', '도보 400m', '택시 8분'];
   /* 카드뉴스 글꼴 — 모두 무료(OFL) 폰트. 주아는 400 하나뿐이라 굵기 합성을 막고 크기로 강약을 줍니다. */
   const ST_FONTS = [
     { id:'jua',    label:'주아',        css:'Jua',              bold:400, body:400 },
@@ -3102,6 +3507,44 @@
   $('#stTitle').value = typeof stSaved.title === 'string' ? stSaved.title : '';
   $('#stSub').value = typeof stSaved.sub === 'string' ? stSaved.sub : '';
   $('#stTag').value = (typeof stSaved.tag === 'string' && stSaved.tag) ? stSaved.tag : '@dotori_haru';
+
+  /* ---------- ④ 동선 · ⑤ 체크리스트 입력 상태 ---------- */
+  $('#stTlCap').value = (typeof stSaved.tlCap === 'string' && stSaved.tlCap) ? stSaved.tlCap : '낮부터 밤까지';
+  let stTlRows = Array.isArray(stSaved.tl)
+    ? stSaved.tl.filter(r => r && typeof r === 'object').slice(0, 7).map(r => ({ place: String(r.place || ''), move: String(r.move || '') }))
+    : [];
+  while (stTlRows.length < 3) stTlRows.push({ place: '', move: '' });
+  let stTlFocus = null;
+  const stCkSaved = (stSaved.ck && typeof stSaved.ck === 'object') ? stSaved.ck : {};
+  $('#stCkIntro').value = typeof stCkSaved.intro === 'string' ? stCkSaved.intro : '';
+  $('#stCkA').value = typeof stCkSaved.aTitle === 'string' ? stCkSaved.aTitle : '';
+  $('#stCkB').value = typeof stCkSaved.bTitle === 'string' ? stCkSaved.bTitle : '';
+  $('#stCkAItems').value = typeof stCkSaved.aItems === 'string' ? stCkSaved.aItems : '';
+  $('#stCkBItems').value = typeof stCkSaved.bItems === 'string' ? stCkSaved.bItems : '';
+
+  function renderStTlRows(){
+    const box = $('#stTlRows');
+    if (!box) return;
+    box.innerHTML = stTlRows.map((r, i) =>
+      '<div class="tl-row" data-tli="' + i + '">' +
+        '<input type="text" class="tl-place" data-tlplace="' + i + '" value="' + escapeHtml(r.place) + '" placeholder="장소 (예: 오룻밀)" autocomplete="off">' +
+        '<input type="text" class="tl-move" data-tlmove="' + i + '" value="' + escapeHtml(r.move) + '" placeholder="이동 (선택)" autocomplete="off">' +
+        '<button type="button" class="tl-del" data-tldel="' + i + '" aria-label="이 줄 지우기"><svg class="ic"><use href="#i-trash"></use></svg></button>' +
+      '</div>'
+    ).join('');
+  }
+  function renderStTlPresets(){
+    const box = $('#stTlPresets');
+    if (!box) return;
+    box.innerHTML = ST_TL_PRESETS.map(p =>
+      '<button class="chip" data-tlpreset="' + p + '">' + p + '</button>'
+    ).join('');
+  }
+  function stStyleUI(){
+    const tl = stStyle === 'timeline', ck = stStyle === 'checklist';
+    $('#stTlBox').hidden = !tl;
+    $('#stCkBox').hidden = !ck;
+  }
 
   function stRound(x, y, w, h, r){
     const rr = Math.max(0, Math.min(r, w / 2, h / 2));
@@ -3343,6 +3786,249 @@
     cx.fillText(tag, 84, CH - 76);
   }
 
+  /* ---------- ④⑤ 여행 카드 공통 헬퍼 ---------- */
+  function stClip(text, maxW){
+    let t = String(text || '');
+    if (cx.measureText(t).width <= maxW) return t;
+    while (t.length > 1 && cx.measureText(t + '…').width > maxW) t = t.slice(0, -1);
+    return t + '…';
+  }
+  function stCkItems(v){
+    return String(v || '').split('\n').map(s => s.trim()).filter(Boolean);
+  }
+  /* 사진 위에 어둑한 그라데이션을 깔고, 사진이 없으면 파스텔 빛번짐 배경을 씁니다 */
+  function stPhotoBackdrop(){
+    if (stImg) {
+      stCover(stImg, 0, 0, CW, CH, 0);
+      const g = cx.createLinearGradient(0, 0, 0, CH);
+      g.addColorStop(0, 'rgba(36,30,26,.66)');
+      g.addColorStop(.42, 'rgba(36,30,26,.44)');
+      g.addColorStop(1, 'rgba(27,22,19,.82)');
+      cx.fillStyle = g;
+      cx.fillRect(0, 0, CW, CH);
+      const v = cx.createRadialGradient(CW / 2, CH / 2, CH * .2, CW / 2, CH / 2, CH * .78);
+      v.addColorStop(0, 'rgba(20,16,14,0)');
+      v.addColorStop(1, 'rgba(20,16,14,.4)');
+      cx.fillStyle = v;
+      cx.fillRect(0, 0, CW, CH);
+      return;
+    }
+    const g = cx.createLinearGradient(0, 0, CW * .7, CH);
+    g.addColorStop(0, '#5C4B3F');
+    g.addColorStop(.55, '#493A31');
+    g.addColorStop(1, '#322A24');
+    cx.fillStyle = g;
+    cx.fillRect(0, 0, CW, CH);
+    const m = cx.createRadialGradient(CW * .16, CH * .14, 0, CW * .16, CH * .14, 640);
+    m.addColorStop(0, 'rgba(231,247,239,.34)');
+    m.addColorStop(1, 'rgba(231,247,239,0)');
+    cx.fillStyle = m;
+    cx.fillRect(0, 0, CW, CH);
+    const p = cx.createRadialGradient(CW * .94, CH * .9, 0, CW * .94, CH * .9, 580);
+    p.addColorStop(0, 'rgba(255,237,232,.32)');
+    p.addColorStop(1, 'rgba(255,237,232,0)');
+    cx.fillStyle = p;
+    cx.fillRect(0, 0, CW, CH);
+  }
+  /* 하단 워터마크 — 도토리 캐릭터 + 계정 */
+  function stWatermark(){
+    const tagTxt = ($('#stTag').value || '').trim() || '@dotori_haru';
+    cx.textAlign = 'left';
+    cx.textBaseline = 'alphabetic';
+    cx.font = stFont(800, 26);
+    cx.fillStyle = 'rgba(255,255,255,.92)';
+    const w = cx.measureText(tagTxt).width;
+    const x = CW - 92 - w;
+    cx.fillText(tagTxt, x, CH - 74);
+    drawAcorn(cx, x - 48, CH - 104, 1.45, 'rgba(255,255,255,.9)');
+  }
+
+  /* ④ 여행 동선 타임라인 — 사진 위에 세로 선 · 장소(왼쪽) · 이동(오른쪽) */
+  function stDrawTimeline(title, sub, tag){
+    stPhotoBackdrop();
+    cx.textAlign = 'left';
+    cx.textBaseline = 'alphabetic';
+
+    const cap = ($('#stTlCap').value || '').trim();
+    if (cap) {
+      cx.font = stFont(700, 24);
+      const capW = cx.measureText(cap).width;
+      cx.fillStyle = 'rgba(255,255,255,.15)';
+      stRound(84, 84, capW + 48, 54, 27);
+      cx.fill();
+      cx.strokeStyle = 'rgba(255,255,255,.24)';
+      cx.lineWidth = 1.5;
+      stRound(84, 84, capW + 48, 54, 27);
+      cx.stroke();
+      cx.fillStyle = 'rgba(255,255,255,.94)';
+      cx.fillText(cap, 108, 119);
+    }
+
+    cx.textAlign = 'center';
+    if (sub) {
+      cx.font = stFont(700, 34);
+      cx.fillStyle = 'rgba(255,255,255,.86)';
+      cx.fillText(stClip(sub, CW - 220), CW / 2, 300);
+    }
+    const titleY = sub ? 388 : 356;
+    cx.font = stFont(800, 70);
+    cx.fillStyle = '#FFFFFF';
+    cx.shadowColor = 'rgba(0,0,0,.3)';
+    cx.shadowBlur = 18;
+    cx.fillText(stClip(title, CW - 190), CW / 2, titleY);
+    cx.shadowBlur = 0;
+    cx.fillStyle = '#FFE58F';
+    stRound(CW / 2 - 34, titleY + 26, 68, 6, 3);
+    cx.fill();
+    cx.textAlign = 'left';
+
+    const rows = stTlRows
+      .map(r => ({ place: String((r && r.place) || '').trim(), move: String((r && r.move) || '').trim() }))
+      .filter(r => r.place);
+    /* 이동 칸을 하나도 안 적었으면 왼쪽 세로 코스표로 장소만 깔끔하게 */
+    const anyMove = rows.some(r => r.move);
+    const lineX = anyMove ? CW / 2 + 12 : 168;
+    const top = anyMove ? 512 : 470, bottom = anyMove ? 1120 : 1150;
+    const n = rows.length;
+    if (!n) {
+      cx.textAlign = 'center';
+      cx.font = stFont(700, 30);
+      cx.fillStyle = 'rgba(255,255,255,.72)';
+      cx.fillText('아래 동선에 장소를 넣어 주세요', CW / 2, 790);
+      cx.textAlign = 'left';
+      stWatermark();
+      return;
+    }
+    const step = n > 1 ? Math.min(anyMove ? 132 : 124, (bottom - top) / (n - 1)) : 0;
+    const startY = n > 1 ? top : (top + bottom) / 2;
+    const endY = startY + step * (n - 1);
+
+    cx.strokeStyle = 'rgba(255,255,255,.72)';
+    cx.lineWidth = 2.5;
+    cx.beginPath();
+    cx.moveTo(lineX, startY - 48);
+    cx.lineTo(lineX, endY + 52);
+    cx.stroke();
+    cx.beginPath();
+    cx.moveTo(lineX - 11, endY + 38);
+    cx.lineTo(lineX, endY + 58);
+    cx.lineTo(lineX + 11, endY + 38);
+    cx.stroke();
+
+    rows.forEach((r, i) => {
+      const y = startY + step * i;
+      cx.beginPath();
+      cx.fillStyle = i === 0 ? '#FFE58F' : '#E7F7EF';
+      cx.arc(lineX, y, anyMove ? 9 : 10, 0, Math.PI * 2);
+      cx.fill();
+      cx.strokeStyle = 'rgba(255,255,255,.9)';
+      cx.lineWidth = 2;
+      cx.stroke();
+
+      if (anyMove) {
+        cx.textAlign = 'right';
+        cx.font = stFont(800, 34);
+        cx.fillStyle = '#FFFFFF';
+        cx.shadowColor = 'rgba(0,0,0,.26)';
+        cx.shadowBlur = 10;
+        cx.fillText(stClip(r.place, 372), lineX - 44, y + 12);
+        cx.shadowBlur = 0;
+        if (r.move) {
+          cx.textAlign = 'left';
+          cx.font = stFont(700, 25);
+          cx.fillStyle = 'rgba(255,255,255,.84)';
+          cx.fillText(stClip(r.move, 392), lineX + 44, y + 12);
+        }
+      } else {
+        /* 장소 이름만 — 동선표처럼 크게 왼쪽 정렬 */
+        cx.textAlign = 'left';
+        cx.font = stFont(800, 42);
+        cx.fillStyle = '#FFFFFF';
+        cx.shadowColor = 'rgba(0,0,0,.28)';
+        cx.shadowBlur = 12;
+        cx.fillText(stClip(r.place, CW - 92 - (lineX + 52)), lineX + 52, y + 15);
+        cx.shadowBlur = 0;
+      }
+    });
+    cx.textAlign = 'left';
+    stWatermark();
+  }
+
+  /* ⑤ 여행 스팟 체크리스트 — 제목 + 소개 + 두 칸 번호 목록 */
+  function stDrawChecklist(title, sub, tag){
+    stPhotoBackdrop();
+    cx.textAlign = 'left';
+    cx.textBaseline = 'alphabetic';
+
+    if (sub) {
+      cx.font = stFont(700, 32);
+      cx.fillStyle = 'rgba(255,255,255,.86)';
+      cx.fillText(stClip(sub, 720), 92, 170);
+    }
+    const titleY = sub ? 268 : 236;
+    cx.font = stFont(800, 88);
+    cx.fillStyle = '#FFFFFF';
+    cx.shadowColor = 'rgba(0,0,0,.28)';
+    cx.shadowBlur = 16;
+    const tTxt = stClip(title, 690);
+    cx.fillText(tTxt, 92, titleY);
+    const tW = cx.measureText(tTxt).width;
+    cx.shadowBlur = 0;
+    cx.font = stFont(800, 40);
+    cx.fillStyle = '#FFE58F';
+    cx.fillText('체크리스트', 92 + tW + 20, titleY - 2);
+
+    const intro = ($('#stCkIntro').value || '').trim();
+    if (intro) {
+      cx.font = stFont(400, 26);
+      cx.fillStyle = 'rgba(255,255,255,.82)';
+      const lines = stFit(intro, 700, 4);
+      lines.forEach((ln, i) => cx.fillText(ln, 92, titleY + 76 + i * 42));
+    }
+
+    const cols = [
+      { title: ($('#stCkA').value || '').trim() || '스팟', items: stCkItems($('#stCkAItems').value).slice(0, 6) },
+      { title: ($('#stCkB').value || '').trim() || '카페', items: stCkItems($('#stCkBItems').value).slice(0, 6) }
+    ];
+    const colTop = 902;
+    const colX = [110, 570];
+    const colW = 380;
+    cols.forEach((c, ci) => {
+      const x = colX[ci];
+      const items = c.items;
+      const step = items.length > 1 ? Math.min(56, 244 / (items.length - 1)) : 0;
+      const lastY = colTop + 72 + step * Math.max(0, items.length - 1);
+
+      cx.strokeStyle = 'rgba(255,255,255,.3)';
+      cx.lineWidth = 2;
+      cx.beginPath();
+      cx.moveTo(x - 22, colTop - 52);
+      cx.lineTo(x - 22, Math.max(colTop + 40, lastY + 10));
+      cx.stroke();
+
+      cx.font = stFont(800, 34);
+      cx.fillStyle = '#FFFFFF';
+      cx.fillText(stClip(c.title, colW), x, colTop);
+
+      items.forEach((it, i) => {
+        const y = colTop + 72 + step * i;
+        cx.fillStyle = ci === 0 ? 'rgba(231,247,239,.94)' : 'rgba(255,229,143,.94)';
+        stRound(x, y - 28, 28, 28, 10);
+        cx.fill();
+        cx.fillStyle = '#3B4A42';
+        cx.font = stFont(800, 15);
+        cx.textAlign = 'center';
+        cx.fillText(String(i + 1), x + 14, y - 8);
+        cx.textAlign = 'left';
+        cx.font = stFont(700, 27);
+        cx.fillStyle = 'rgba(255,255,255,.95)';
+        cx.fillText(stClip(it, colW - 46), x + 40, y - 3);
+      });
+    });
+    cx.textAlign = 'left';
+    stWatermark();
+  }
+
   function stDraw(){
     const title = ($('#stTitle').value || '').trim() || '제목을 적어 주세요';
     const sub = ($('#stSub').value || '').trim();
@@ -3352,6 +4038,8 @@
     cx.textBaseline = 'alphabetic';
     if (stStyle === 'cream') stDrawCream(title, sub, tag);
     else if (stStyle === 'label') stDrawLabel(title, sub, tag);
+    else if (stStyle === 'timeline') stDrawTimeline(title, sub, tag);
+    else if (stStyle === 'checklist') stDrawChecklist(title, sub, tag);
     else stDrawMagazine(title, sub, tag);
   }
 
@@ -3366,6 +4054,7 @@
     $('#stStyleChips').innerHTML = ST_STYLES.map(s =>
       '<button class="chip' + (s.id === stStyle ? ' is-on' : '') + '" data-ststyle="' + s.id + '" style="font-size:11.5px;padding:8px 11px">' + s.label + '</button>'
     ).join('');
+    stStyleUI();
   }
   function renderStFonts(){
     $('#stFontChips').innerHTML = ST_FONTS.map(f =>
@@ -3388,6 +4077,59 @@
     renderStStyles();
     stDraw();
     stSaveDraft();
+  });
+
+  /* ---------- ④ 동선 입력 이벤트 ---------- */
+  $('#stTlRows').addEventListener('input', e => {
+    const pi = e.target.getAttribute('data-tlplace');
+    const mi = e.target.getAttribute('data-tlmove');
+    if (pi === null && mi === null) return;
+    const idx = Number(pi === null ? mi : pi);
+    if (!stTlRows[idx]) return;
+    if (pi === null) stTlRows[idx].move = e.target.value;
+    else stTlRows[idx].place = e.target.value;
+    stQueue();
+    stSaveDraft();
+  });
+  $('#stTlRows').addEventListener('focusin', e => {
+    const mi = e.target.getAttribute('data-tlmove');
+    if (mi !== null) stTlFocus = Number(mi);
+    const pi = e.target.getAttribute('data-tlplace');
+    if (pi !== null) stTlFocus = Number(pi);
+  });
+  $('#stTlRows').addEventListener('click', e => {
+    const del = e.target.closest('[data-tldel]');
+    if (!del) return;
+    const idx = Number(del.getAttribute('data-tldel'));
+    if (stTlRows.length <= 1) { toast('한 줄은 남겨 두세요'); return; }
+    stTlRows.splice(idx, 1);
+    stTlFocus = null;
+    renderStTlRows();
+    stDraw();
+    stSaveDraft();
+  });
+  $('#stTlAdd').addEventListener('click', () => {
+    if (stTlRows.length >= 7) { toast('동선은 7곳까지 담을 수 있어요'); return; }
+    stTlRows.push({ place: '', move: '' });
+    renderStTlRows();
+    stSaveDraft();
+    const last = $('.tl-place[data-tlplace="' + (stTlRows.length - 1) + '"]');
+    if (last) { last.scrollIntoView({ behavior: 'smooth', block: 'center' }); last.focus({ preventScroll: true }); }
+  });
+  $('#stTlPresets').addEventListener('click', e => {
+    const b = e.target.closest('[data-tlpreset]');
+    if (!b) return;
+    const val = b.getAttribute('data-tlpreset');
+    const idx = (stTlFocus !== null && stTlRows[stTlFocus]) ? stTlFocus : Math.max(0, stTlRows.length - 1);
+    stTlRows[idx].move = val;
+    const inp = $('.tl-move[data-tlmove="' + idx + '"]');
+    if (inp) inp.value = val;
+    stDraw();
+    stSaveDraft();
+    toast((idx + 1) + '번째 이동에 넣었어요');
+  });
+  ['#stTlCap', '#stCkIntro', '#stCkA', '#stCkB', '#stCkAItems', '#stCkBItems'].forEach(sel => {
+    $(sel).addEventListener('input', () => { stQueue(); stSaveDraft(); });
   });
 
   function stPhotoUI(name){
@@ -3444,7 +4186,16 @@
         font: stFontId,
         title: $('#stTitle').value,
         sub: $('#stSub').value,
-        tag: $('#stTag').value
+        tag: $('#stTag').value,
+        tlCap: $('#stTlCap').value,
+        tl: stTlRows,
+        ck: {
+          intro: $('#stCkIntro').value,
+          aTitle: $('#stCkA').value,
+          bTitle: $('#stCkB').value,
+          aItems: $('#stCkAItems').value,
+          bItems: $('#stCkBItems').value
+        }
       }, true);
     }, 400);
   }
@@ -3532,6 +4283,836 @@
     ]).catch(() => {}).then(() => {
       if (document.fonts.ready) document.fonts.ready.then(() => stDraw());
     });
+  }
+
+  /* ================= 📄 미디어 킷 (Canvas 1080×1350) ================= */
+  const KIT_CATS = ['여행', '감성숙소', '카페', '로컬맛집', '상품리뷰'];
+  const KIT_W = 1080, KIT_H = 1350;
+  const kitCvEl = $('#kitCv');
+  const kx = kitCvEl ? kitCvEl.getContext('2d') : null;
+  let kitCatsSel = KIT_CATS.slice();
+  let kitLastBlob = null, kitLastUrl = '', kitLastName = '';
+
+  const kitSaved = readLS(KEY.kit, null) || {};
+  if (Array.isArray(kitSaved.cats)) {
+    const pick = KIT_CATS.filter(c => kitSaved.cats.indexOf(c) >= 0);
+    if (pick.length) kitCatsSel = pick;
+  }
+  if (typeof kitSaved.tagline === 'string') $('#kitTagline').value = kitSaved.tagline;
+  if (Array.isArray(kitSaved.posts)) {
+    kitSaved.posts.slice(0, 3).forEach((t, i) => {
+      const el = $('#kitPost' + (i + 1));
+      if (el && typeof t === 'string') el.value = t;
+    });
+  }
+
+  function kitIsDate(s){
+    const str = String(s || '');
+    if (str.length !== 10 || str.charAt(4) !== '-' || str.charAt(7) !== '-') return false;
+    const d = new Date(str + 'T00:00:00');
+    return !isNaN(d.getTime());
+  }
+
+  /* data.json(자동) + 직접 기록에서 지금 숫자를 모아 옵니다 */
+  function kitNums(){
+    const st = hallStats();
+    const rows = allRecords();
+    const last = rows.length ? rows[rows.length - 1] : {};
+    return {
+      posts: st ? st.total : 0,
+      streak: st ? (st.now || st.longest.len) : 0,
+      streakLive: !!(st && st.now > 0),
+      days: st ? st.days : 0,
+      first: st ? st.first : '',
+      blog: num(last.blog),
+      neighbor: num(last.neighbor),
+      insta: num(last.insta),
+      lastDate: last.date || ''
+    };
+  }
+  function kitPlus(n){ return num(n) > 0 ? fmt(n) + '+' : '—'; }
+
+  /* 최근 발행 글 — 재활용 보드에 모인 글(자동 + 직접)에서 골라 씁니다 */
+  function kitRecentPosts(){
+    const seen = {}, list = [];
+    const push = p => {
+      const t = String((p && p.title) || '').trim();
+      if (!t) return;
+      const key = t.split(' ').join('').toLowerCase();
+      if (seen[key]) return;
+      seen[key] = 1;
+      list.push({ title: t, date: String((p && p.date) || '') });
+    };
+    recyclePosts.forEach(push);
+    AUTO.recycle.forEach(push);
+    list.sort((a, b) => String(b.date).localeCompare(String(a.date)));
+    return list;
+  }
+
+  function renderKitPosts(){
+    const sel = $('#kitPick');
+    if (!sel) return;
+    const list = kitRecentPosts().slice(0, 80);
+    sel.innerHTML = '<option value="">최근 발행 글에서 고르기</option>' + list.map(p => {
+      const when = kitIsDate(p.date) ? ' · ' + shortDate(p.date) : '';
+      return '<option value="' + escapeHtml(p.title) + '">' + escapeHtml(p.title) + when + '</option>';
+    }).join('');
+    $('#kitAutoNote').textContent = list.length ? list.length + '편에서 고를 수 있어요' : '';
+  }
+
+  function renderKitCats(){
+    $('#kitCats').innerHTML = KIT_CATS.map(c =>
+      '<button class="chip' + (kitCatsSel.indexOf(c) >= 0 ? ' is-on' : '') + '" data-kitcat="' + c + '" style="font-size:12px;padding:8px 11px">' + c + '</button>'
+    ).join('');
+  }
+
+  let kitSaveTimer = null;
+  function kitSaveDraft(){
+    clearTimeout(kitSaveTimer);
+    kitSaveTimer = setTimeout(() => {
+      writeLS(KEY.kit, {
+        cats: kitCatsSel.slice(),
+        tagline: $('#kitTagline').value,
+        posts: [1, 2, 3].map(i => $('#kitPost' + i).value)
+      }, true);
+    }, 400);
+  }
+
+  function kitFillPosts(titles){
+    [1, 2, 3].forEach(i => { $('#kitPost' + i).value = titles[i - 1] || ''; });
+    kitDraw();
+    kitSaveDraft();
+  }
+
+  /* ---------- canvas 그리기 도우미 ---------- */
+  function kRound(ctx, x, y, w, h, r){
+    const rr = Math.max(0, Math.min(r, w / 2, h / 2));
+    ctx.beginPath();
+    if (typeof ctx.roundRect === 'function') { ctx.roundRect(x, y, w, h, rr); return; }
+    ctx.moveTo(x + rr, y);
+    ctx.arcTo(x + w, y, x + w, y + h, rr);
+    ctx.arcTo(x + w, y + h, x, y + h, rr);
+    ctx.arcTo(x, y + h, x, y, rr);
+    ctx.arcTo(x, y, x + w, y, rr);
+    ctx.closePath();
+  }
+  function kFont(weight, size){
+    return weight + ' ' + size + 'px NanumSquareRound,"NanumSquare","Apple SD Gothic Neo","Malgun Gothic",sans-serif';
+  }
+  /* 주아는 400 한 종류뿐이라 굵기 합성 없이 크기로만 강약을 줍니다 */
+  function kDisp(size){ return '400 ' + size + 'px Jua,"NanumSquareRound",sans-serif'; }
+  function kTracked(ctx, text, x, y, track){
+    let cur = x;
+    for (let i = 0; i < text.length; i++) {
+      ctx.fillText(text.charAt(i), cur, y);
+      cur += ctx.measureText(text.charAt(i)).width + track;
+    }
+    return cur;
+  }
+  /* 폰트가 커서 넘칠 때 카드 폭에 맞춰 크기를 줄입니다 */
+  function kFit(ctx, text, maxW, weight, startSize, minSize){
+    let size = startSize;
+    while (size > minSize) {
+      ctx.font = kFont(weight, size);
+      if (ctx.measureText(text).width <= maxW) break;
+      size -= 2;
+    }
+    ctx.font = kFont(weight, size);
+    return size;
+  }
+  function kClip(ctx, text, maxW){
+    let s = String(text || '');
+    if (ctx.measureText(s).width <= maxW) return s;
+    while (s.length > 1 && ctx.measureText(s + '…').width > maxW) s = s.slice(0, -1);
+    return s + '…';
+  }
+  /* 앱 아이콘의 동글통통 도토리를 캔버스에도 그대로니다 */
+  function drawAcorn(ctx, x, y, scale, color){
+    const sym = document.getElementById('i-acorn');
+    if (!sym) return;
+    ctx.save();
+    ctx.translate(x, y);
+    ctx.scale(scale, scale);
+    ctx.fillStyle = color;
+    ctx.strokeStyle = color;
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+    Array.prototype.forEach.call(sym.querySelectorAll('path,ellipse'), el => {
+      const alpha = el.getAttribute('opacity') ? Number(el.getAttribute('opacity')) : 1;
+      ctx.globalAlpha = alpha;
+      if (el.tagName.toLowerCase() === 'ellipse') {
+        ctx.beginPath();
+        ctx.ellipse(num(el.getAttribute('cx')), num(el.getAttribute('cy')), num(el.getAttribute('rx')), num(el.getAttribute('ry')), 0, 0, Math.PI * 2);
+        ctx.fill();
+      } else {
+        const p = new Path2D(el.getAttribute('d'));
+        if (el.getAttribute('fill') === 'currentColor') ctx.fill(p);
+        if (el.getAttribute('stroke') === 'currentColor') {
+          ctx.lineWidth = Number(el.getAttribute('stroke-width') || 1.8);
+          ctx.stroke(p);
+        }
+      }
+    });
+    ctx.globalAlpha = 1;
+    ctx.restore();
+  }
+
+  function kitDraw(){
+    if (!kx) return;
+    const n = kitNums();
+    const tagline = ($('#kitTagline').value || '').trim() || '충남 아산 · 여행 · 카페 · 맛집 기록';
+    const cats = kitCatsSel.length ? kitCatsSel.slice() : KIT_CATS.slice();
+    const posts = [1, 2, 3].map(i => ($('#kitPost' + i).value || '').trim()).filter(Boolean);
+
+    kx.setTransform(1, 0, 0, 1, 0, 0);
+    kx.clearRect(0, 0, KIT_W, KIT_H);
+    kx.fillStyle = '#FFFDF5';
+    kx.fillRect(0, 0, KIT_W, KIT_H);
+
+    let g = kx.createRadialGradient(1050, 30, 0, 1050, 30, 660);
+    g.addColorStop(0, 'rgba(231,247,239,.95)');
+    g.addColorStop(1, 'rgba(231,247,239,0)');
+    kx.fillStyle = g;
+    kx.fillRect(0, 0, KIT_W, KIT_H);
+    g = kx.createRadialGradient(20, 1330, 0, 20, 1330, 640);
+    g.addColorStop(0, 'rgba(255,247,218,.95)');
+    g.addColorStop(1, 'rgba(255,247,218,0)');
+    kx.fillStyle = g;
+    kx.fillRect(0, 0, KIT_W, KIT_H);
+
+    kx.strokeStyle = '#F1E9D9';
+    kx.lineWidth = 3;
+    kRound(kx, 40, 40, KIT_W - 80, KIT_H - 80, 48);
+    kx.stroke();
+
+    kx.textAlign = 'left';
+    kx.textBaseline = 'alphabetic';
+
+    drawAcorn(kx, 880, 96, 3.7, '#B08A62');
+
+    kx.font = kFont(800, 20);
+    kx.fillStyle = '#B0A18C';
+    kTracked(kx, 'MEDIA KIT · ' + new Date().getFullYear(), 96, 140, 5);
+
+    kx.fillStyle = '#4E3928';
+    kx.font = kDisp(92);
+    kx.fillText('도토리하루', 92, 242);
+
+    kx.fillStyle = '#7E6B59';
+    kx.font = kFont(700, 29);
+    kx.fillText(kClip(kx, tagline, 730), 96, 294);
+
+    kx.strokeStyle = '#EDE3D2';
+    kx.lineWidth = 2;
+    kx.beginPath();
+    kx.moveTo(96, 336);
+    kx.lineTo(KIT_W - 96, 336);
+    kx.stroke();
+
+    /* 큰 숫자 3개 */
+    const bigs = [
+      { k: '누적 포스팅', v: n.posts ? fmt(n.posts) : '—', u: n.posts ? '편' : '', cap: '블로그 공개 글', bg: '#E7F7EF', fg: '#2F6B54' },
+      { k: n.streakLive ? '연속 포스팅' : '최장 연속', v: n.streak ? fmt(n.streak) : '—', u: n.streak ? '일' : '', cap: n.streakLive ? '오늘까지 이어짐' : '가장 길었던 기록', bg: '#FFF7DA', fg: '#8A6C2E' },
+      { k: '블로그 토탈', v: n.blog ? fmt(n.blog) : '—', u: n.blog ? '+' : '', cap: '누적 방문', bg: '#FFEDE8', fg: '#A85C4A' }
+    ];
+    const cardW = (KIT_W - 192 - 32) / 3;
+    bigs.forEach((b, i) => {
+      const x = 96 + i * (cardW + 16);
+      const y = 372, h = 210;
+      kx.fillStyle = b.bg;
+      kRound(kx, x, y, cardW, h, 34);
+      kx.fill();
+      kx.globalAlpha = 0.82;
+      kx.fillStyle = b.fg;
+      kx.font = kFont(800, 22);
+      kx.fillText(b.k, x + 30, y + 56);
+      kx.globalAlpha = 1;
+      const numTxt = b.v + b.u;
+      kFit(kx, numTxt, cardW - 60, 800, 62, 30);
+      kx.fillText(numTxt, x + 30, y + 142);
+      kx.globalAlpha = 0.62;
+      kx.font = kFont(700, 19);
+      kx.fillText(b.cap, x + 30, y + 182);
+      kx.globalAlpha = 1;
+    });
+
+    /* 작은 숫자 2개 */
+    const smalls = [
+      { k: '블로그 이웃', v: kitPlus(n.neighbor) },
+      { k: '인스타 @dotori_haru', v: kitPlus(n.insta) }
+    ];
+    const smallW = (KIT_W - 192 - 16) / 2;
+    smalls.forEach((s, i) => {
+      const x = 96 + i * (smallW + 16);
+      const y = 600, h = 112;
+      kx.fillStyle = 'rgba(255,255,255,.82)';
+      kRound(kx, x, y, smallW, h, 28);
+      kx.fill();
+      kx.strokeStyle = '#F1E9D9';
+      kx.lineWidth = 2;
+      kx.stroke();
+      kx.fillStyle = '#A89786';
+      kx.font = kFont(800, 21);
+      kx.fillText(s.k, x + 30, y + 44);
+      kx.fillStyle = '#5C4B3B';
+      kx.font = kFont(800, 40);
+      kx.fillText(s.v, x + 30, y + 90);
+    });
+
+    /* 주력 카테고리 */
+    kx.fillStyle = '#B0A18C';
+    kx.font = kFont(800, 20);
+    kTracked(kx, '주력 카테고리', 96, 782, 3);
+
+    let chipFont = 26;
+    kx.font = kFont(800, chipFont);
+    const chipTotal = () => cats.reduce((acc, c) => acc + kx.measureText(c).width + 48, 0) + 12 * (cats.length - 1);
+    while (chipFont > 16 && chipTotal() > KIT_W - 192) { chipFont -= 2; kx.font = kFont(800, chipFont); }
+    const tints = ['#E7F7EF', '#FFF7DA', '#FFEDE8', '#EEF4FB', '#F6EFFB'];
+    let chipX = 96;
+    cats.forEach((c, i) => {
+      const w = kx.measureText(c).width + 48;
+      const h = chipFont + 28;
+      kx.fillStyle = tints[i % tints.length];
+      kRound(kx, chipX, 804, w, h, h / 2);
+      kx.fill();
+      kx.fillStyle = '#5C4B3B';
+      kx.fillText(c, chipX + 24, 804 + h / 2 + chipFont / 3);
+      chipX += w + 12;
+    });
+
+    /* 대표 글 */
+    kx.fillStyle = '#B0A18C';
+    kx.font = kFont(800, 20);
+    kTracked(kx, '대표 글', 96, 928, 3);
+    if (!posts.length) {
+      kx.fillStyle = '#C3B7A6';
+      kx.font = kFont(700, 26);
+      kx.fillText('대표 글을 3개까지 담을 수 있어요', 96, 992);
+    } else {
+      for (let i = 0; i < 3; i++) {
+        const yy = 996 + i * 62;
+        const t = posts[i];
+        if (!t) {
+          /* 빈칸은 점선 자리로만 남겨 카드 모양이 흔들리지 않게 */
+          kx.save();
+          kx.setLineDash([10, 9]);
+          kx.strokeStyle = '#EFE6D5';
+          kx.lineWidth = 2;
+          kRound(kx, 96, yy - 38, KIT_W - 192, 54, 18);
+          kx.stroke();
+          kx.restore();
+          continue;
+        }
+        kx.fillStyle = '#E7F7EF';
+        kRound(kx, 96, yy - 36, 46, 46, 16);
+        kx.fill();
+        kx.fillStyle = '#3F7C64';
+        kx.font = kFont(800, 22);
+        kx.textAlign = 'center';
+        kx.fillText('0' + (i + 1), 119, yy - 5);
+        kx.textAlign = 'left';
+        kx.fillStyle = '#5C4B3B';
+        kx.font = kFont(700, 30);
+        kx.fillText(kClip(kx, t, KIT_W - 96 - 176), 164, yy);
+      }
+    }
+
+    /* 꼬리말 */
+    kx.strokeStyle = '#EDE3D2';
+    kx.lineWidth = 2;
+    kx.beginPath();
+    kx.moveTo(96, 1146);
+    kx.lineTo(KIT_W - 96, 1146);
+    kx.stroke();
+
+    kx.fillStyle = '#4E3928';
+    kx.font = kDisp(42);
+    kx.fillText('@dotori_haru', 96, 1214);
+    kx.fillStyle = '#3F7C64';
+    kx.font = kFont(800, 22);
+    kx.fillText('협업 · 체험단 문의는 DM 주세요', 96, 1254);
+
+    kx.textAlign = 'right';
+    kx.fillStyle = '#7E6B59';
+    kx.font = kFont(700, 24);
+    kx.fillText('blog.naver.com/binifilm', KIT_W - 96, 1212);
+    kx.fillStyle = '#A89786';
+    kx.font = kFont(700, 20);
+    kx.fillText('네이버 블로그 · 인스타그램', KIT_W - 96, 1252);
+    kx.textAlign = 'left';
+  }
+
+  let kitQueued = false;
+  function kitQueue(){
+    if (kitQueued) return;
+    kitQueued = true;
+    requestAnimationFrame(() => { kitQueued = false; kitDraw(); });
+  }
+
+  function renderKit(){
+    const n = kitNums();
+    const head = [];
+    if (n.posts) head.push('누적 <b>' + fmt(n.posts) + '편</b>');
+    if (n.streak) head.push('연속 <b>' + fmt(n.streak) + '일</b>');
+    $('#kitSum').innerHTML = head.length
+      ? head.join(' · ') + ' 기록을 그대로 담아요'
+      : '숫자가 쌓이면 카드에 자동으로 담겨요';
+    const facts = [
+      ['누적 포스팅', n.posts ? fmt(n.posts) + '편' : '—'],
+      [n.streakLive ? '연속 포스팅' : '최장 연속', n.streak ? fmt(n.streak) + '일' : '—'],
+      ['블로그 토탈', kitPlus(n.blog)],
+      ['블로그 이웃', kitPlus(n.neighbor)],
+      ['인스타 팔로워', kitPlus(n.insta)]
+    ];
+    $('#kitFacts').innerHTML = facts.map(f =>
+      '<div class="kit-fact"><span class="k">' + f[0] + '</span><span class="v">' + f[1] + '</span></div>'
+    ).join('');
+    renderKitPosts();
+    kitDraw();
+  }
+
+  function kitLoadFonts(){
+    kitDraw();
+    if (!document.fonts || !document.fonts.load) return;
+    Promise.all([
+      document.fonts.load('800 40px NanumSquareRound'),
+      document.fonts.load('700 40px NanumSquareRound'),
+      document.fonts.load('400 40px Jua')
+    ]).catch(() => {}).then(() => {
+      if (document.fonts.ready) document.fonts.ready.then(() => kitDraw());
+    });
+  }
+
+  function kitShowResult(blob){
+    kitLastBlob = blob;
+    if (kitLastUrl) URL.revokeObjectURL(kitLastUrl);
+    kitLastUrl = URL.createObjectURL(blob);
+    $('#kitResultImg').src = kitLastUrl;
+    const kb = Math.max(1, Math.round(blob.size / 1024));
+    $('#kitResultMeta').textContent = '1080 × 1350 PNG · ' + (kb > 1024 ? (kb / 1024).toFixed(1) + 'MB' : kb + 'KB');
+    $('#kitDl').href = kitLastUrl;
+    $('#kitDl').download = kitLastName;
+    $('#kitResult').hidden = false;
+    $('#kitShare').hidden = !stShareOK();
+  }
+
+  $('#kitCats').addEventListener('click', e => {
+    const b = e.target.closest('[data-kitcat]');
+    if (!b) return;
+    const c = b.getAttribute('data-kitcat');
+    const i = kitCatsSel.indexOf(c);
+    if (i >= 0) {
+      if (kitCatsSel.length <= 1) { toast('카테고리는 하나 이상 남겨 주세요'); return; }
+      kitCatsSel.splice(i, 1);
+    } else {
+      kitCatsSel.push(c);
+    }
+    renderKitCats();
+    kitDraw();
+    kitSaveDraft();
+  });
+  $('#kitPick').addEventListener('change', e => {
+    const t = e.target.value;
+    if (!t) return;
+    let slot = 0;
+    for (let i = 1; i <= 3; i++) {
+      if (!($('#kitPost' + i).value || '').trim()) { slot = i; break; }
+    }
+    if (!slot) slot = 3;
+    $('#kitPost' + slot).value = t;
+    e.target.value = '';
+    kitDraw();
+    kitSaveDraft();
+    toast(slot + '번째 대표 글로 담았어요');
+  });
+  $('#kitAuto3').addEventListener('click', () => {
+    const list = kitRecentPosts().slice(0, 3).map(p => p.title);
+    if (!list.length) { toast('불러올 글이 아직 없어요'); return; }
+    kitFillPosts(list);
+    toast('최신 글 ' + list.length + '편을 담았어요');
+  });
+  ['#kitTagline', '#kitPost1', '#kitPost2', '#kitPost3'].forEach(sel => {
+    $(sel).addEventListener('input', () => { kitQueue(); kitSaveDraft(); });
+  });
+
+  $('#kitSave').addEventListener('click', () => {
+    kitDraw();
+    kitLastName = '도토리하루-미디어킷-' + stStamp() + '.png';
+    const finish = blob => {
+      if (!blob) { toast('이미지를 만들지 못했어요'); return; }
+      kitShowResult(blob);
+      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+        (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      if (!isIOS) {
+        const a = document.createElement('a');
+        a.href = kitLastUrl;
+        a.download = kitLastName;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        toast('PNG를 저장했어요');
+      } else {
+        toast('이미지를 만들었어요 · 길게 눌러 저장하세요');
+      }
+    };
+    if (kitCvEl.toBlob) {
+      kitCvEl.toBlob(finish, 'image/png');
+    } else {
+      try {
+        const url = kitCvEl.toDataURL('image/png');
+        const bin = atob(url.split(',')[1]);
+        const ab = new Uint8Array(bin.length);
+        for (let i = 0; i < bin.length; i++) ab[i] = bin.charCodeAt(i);
+        finish(new Blob([ab], { type: 'image/png' }));
+      } catch (err) { toast('이미지를 만들지 못했어요'); }
+    }
+  });
+
+  $('#kitShare').addEventListener('click', () => {
+    if (!kitLastBlob) { toast('먼저 이미지를 만들어 주세요'); return; }
+    try {
+      const file = new File([kitLastBlob], kitLastName || 'dotori-mediakit.png', { type: 'image/png' });
+      if (!(navigator.canShare && navigator.canShare({ files: [file] }))) {
+        toast('이 브라우저는 공유 시트를 지원하지 않아요');
+        return;
+      }
+      navigator.share({ files: [file], title: '도토리하루 미디어 킷' }).then(
+        () => toast('공유 시트를 열었어요'),
+        err => { if (!(err && err.name === 'AbortError')) toast('공유를 열지 못했어요'); }
+      );
+    } catch (err) { toast('공유를 열지 못했어요'); }
+  });
+
+  /* ================= ✍️ 리뷰노트 · 체험단 신청 한마디 ================= */
+  const PT_CATS = [
+    { id: '맛집', line: '매장 분위기와 대표 메뉴를 사진으로 꼼꼼히 담고, 주차·웨이팅·영업시간까지 한 번에 정리해 소개하겠습니다.' },
+    { id: '숙소', line: '객실 컨디션과 조식, 주변 볼거리까지 실제로 묵어 본 그대로 정리해 소개하겠습니다.' },
+    { id: '카페', line: '좌석과 콘센트, 주차, 디저트까지 실제로 앉아 본 자리 기준으로 정리해 소개하겠습니다.' },
+    { id: '배송형·뷰티', line: '구성과 사용감, 아쉬운 점까지 솔직하게 적고 사진을 넉넉히 담아 소개하겠습니다.' }
+  ];
+  const PT_STRENGTHS = [
+    { id: 'streak', short: '연속 포스팅', line: n => n.streak ? n.streak + '일 연속 포스팅 중이라 발행 약속을 꼭 지킵니다' : '꾸준히 발행하는 기록형 블로거입니다' },
+    { id: 'insta', short: '인스타 1+1', line: () => '블로그 글과 인스타그램 @dotori_haru 카드뉴스·릴스를 같은 날 함께 올려 1+1로 노출합니다' },
+    { id: 'photo', short: '사진·가독성', line: () => '모바일에서 읽기 편하게 문단을 나누고 사진을 넉넉히 담아 올립니다' },
+    { id: 'seo', short: '키워드 상위노출', line: () => '제목과 태그에 검색 키워드를 설계해 상위 노출을 노립니다' }
+  ];
+  let ptCat = '맛집';
+  const ptOn = { streak: true, insta: true, photo: true, seo: true };
+
+  const ptSaved = readLS(KEY.pitch, null) || {};
+  if (PT_CATS.some(c => c.id === ptSaved.cat)) ptCat = ptSaved.cat;
+  if (ptSaved.on && typeof ptSaved.on === 'object') {
+    PT_STRENGTHS.forEach(s => { ptOn[s.id] = ptSaved.on[s.id] !== false; });
+  }
+  if (typeof ptSaved.goal === 'string') $('#ptGoal').value = ptSaved.goal;
+
+  function renderPitchCats(){
+    $('#ptCatChips').innerHTML = PT_CATS.map(c =>
+      '<button class="chip' + (c.id === ptCat ? ' is-on' : '') + '" data-ptcat="' + c.id + '" style="font-size:12.5px;padding:9px 13px">' + c.id + '</button>'
+    ).join('');
+  }
+  function renderPitchStrengths(){
+    const n = kitNums();
+    $('#ptStrengthChips').innerHTML = PT_STRENGTHS.map(s => {
+      const label = (s.id === 'streak' && n.streak) ? n.streak + '일 연속' : s.short;
+      return '<button class="chip' + (ptOn[s.id] ? ' is-on' : '') + '" data-ptstr="' + s.id + '" style="font-size:12px;padding:8px 11px">' + label + '</button>';
+    }).join('');
+  }
+
+  function ptBuild(){
+    const n = kitNums();
+    const cat = PT_CATS.find(c => c.id === ptCat) || PT_CATS[0];
+    const goal = ($('#ptGoal').value || '').trim();
+    const tail = goal || cat.line;
+
+    const factParts = [];
+    if (n.neighbor) factParts.push('이웃 ' + fmt(n.neighbor) + '명');
+    if (n.blog) factParts.push('누적 방문 ' + fmt(n.blog) + '회');
+    const fact = factParts.join(' · ');
+
+    let midline = '';
+    if (fact && n.streak) midline = '블로그는 ' + fact + '이고, ' + n.streak + '일 연속 포스팅 중입니다.';
+    else if (fact) midline = '블로그는 ' + fact + '입니다.';
+    else if (n.streak) midline = '블로그는 ' + n.streak + '일 연속 포스팅 중입니다.';
+    else midline = '블로그와 인스타그램 @dotori_haru를 함께 운영하고 있습니다.';
+
+    const short = [
+      '안녕하세요, 충남 아산에서 여행·카페·맛집을 기록하는 도토리하루입니다.',
+      midline,
+      tail
+    ].filter(Boolean).join('\n');
+
+    const rec = [];
+    if (n.posts) {
+      const opened = n.first ? n.first.slice(0, 4) + '년 ' + Number(n.first.slice(5, 7)) + '월 개설 · ' : '';
+      rec.push('· ' + opened + '누적 포스팅 ' + fmt(n.posts) + '편');
+    }
+    if (fact) rec.push('· ' + fact);
+    if (n.streak) rec.push('· ' + n.streak + '일 연속 포스팅 진행 중');
+    if (n.insta) rec.push('· 인스타그램 @dotori_haru 팔로워 ' + fmt(n.insta) + '명');
+
+    const strengths = PT_STRENGTHS.filter(s => ptOn[s.id]).map(s => '· ' + s.line(n));
+
+    const longParts = [
+      '안녕하세요, 충남 아산에서 여행·카페·맛집을 기록하는 블로거 도토리하루입니다.\n직접 다녀온 곳만 쓰고, 사진과 문단을 꼼꼼히 챙기는 기록형 블로거입니다.'
+    ];
+    if (rec.length) longParts.push('[기록]\n' + rec.join('\n'));
+    if (strengths.length) longParts.push('[이런 걸 잘해요]\n' + strengths.join('\n'));
+    longParts.push('[이번엔 이렇게 쓸게요]\n' + tail + '\n발행 후 링크와 조회·유입 기록까지 정리해 전달드리겠습니다.');
+    longParts.push('협찬 여부는 글과 인스타에 꼭 표기하겠습니다. 잘 부탁드립니다!');
+
+    return { short: short, long: longParts.join('\n\n') };
+  }
+
+  function renderPitch(){
+    const n = kitNums();
+    const out = ptBuild();
+    $('#ptShort').value = out.short;
+    $('#ptLong').value = out.long;
+    const bits = [];
+    if (n.neighbor) bits.push('이웃 ' + fmt(n.neighbor) + '명');
+    if (n.blog) bits.push('토탈 ' + fmt(n.blog) + '회');
+    if (n.streak) bits.push(n.streak + '일 연속');
+    $('#ptSum').innerHTML = bits.length
+      ? '<b>' + bits.join(' · ') + '</b> 수치가 문구에 담겼어요'
+      : '숫자가 쌓이면 문구에 자동으로 들어가요';
+    renderPitchCats();
+    renderPitchStrengths();
+  }
+
+  function ptSave(){
+    writeLS(KEY.pitch, { cat: ptCat, on: ptOn, goal: $('#ptGoal').value }, true);
+  }
+
+  $('#ptCatChips').addEventListener('click', e => {
+    const b = e.target.closest('[data-ptcat]');
+    if (!b) return;
+    ptCat = b.getAttribute('data-ptcat');
+    renderPitch();
+    ptSave();
+  });
+  $('#ptStrengthChips').addEventListener('click', e => {
+    const b = e.target.closest('[data-ptstr]');
+    if (!b) return;
+    const id = b.getAttribute('data-ptstr');
+    ptOn[id] = !ptOn[id];
+    renderPitch();
+    ptSave();
+  });
+  $('#ptGoal').addEventListener('input', () => { renderPitch(); ptSave(); });
+  $('#ptShortCopy').addEventListener('click', () => copyText($('#ptShort').value));
+  $('#ptLongCopy').addEventListener('click', () => copyText($('#ptLong').value));
+
+  /* ================= 🎯 효자 키워드 · 검색 순위 노트 ================= */
+  let kwNotes = readLS(KEY.kw, []);
+  if (!Array.isArray(kwNotes)) kwNotes = [];
+  kwNotes = kwNotes.filter(k => k && String(k.keyword || '').trim()).map(k => ({
+    id: k.id || uid(),
+    keyword: String(k.keyword).trim(),
+    rank: num(k.rank) > 0 ? Math.round(num(k.rank)) : 0,
+    post: String(k.post || ''),
+    memo: String(k.memo || ''),
+    date: kitIsDate(k.date) ? String(k.date) : ''
+  }));
+  let kwEditId = null;
+
+  function kwSorted(){
+    return kwNotes.slice().sort((a, b) => {
+      const ra = a.rank > 0 ? a.rank : 999;
+      const rb = b.rank > 0 ? b.rank : 999;
+      if (ra !== rb) return ra - rb;
+      return String(b.date).localeCompare(String(a.date));
+    });
+  }
+
+  function renderKw(){
+    const box = $('#kwList');
+    if (!box) return;
+    const n1 = kwNotes.filter(k => k.rank === 1).length;
+    const n3 = kwNotes.filter(k => k.rank >= 1 && k.rank <= 3).length;
+    $('#kwSum').innerHTML = kwNotes.length
+      ? '모은 키워드 <b>' + kwNotes.length + '개</b> · 1위 <b>' + n1 + '개</b> · 3위 이내 <b>' + n3 + '개</b>'
+      : '공들인 글의 키워드와 순위를 적어 두면 효자 키워드가 보여요';
+    $('#kwCount').textContent = kwNotes.length ? kwNotes.length + '개' : '';
+    const list = kwSorted();
+    if (!list.length) {
+      box.innerHTML = '<div class="empty">아직 키워드 노트가 없어요<br>아래에서 첫 키워드를 남기면<br>순위와 유입 메모를 한눈에 모아드려요</div>';
+      return;
+    }
+    box.innerHTML = list.map(k => {
+      const cls = k.rank === 1 ? 'top1' : (k.rank >= 2 && k.rank <= 3 ? 'top3' : (k.rank > 0 ? '' : 'out'));
+      const txt = k.rank > 0 ? k.rank + '위' : '순위 밖';
+      return '<div class="kw-row" data-kwid="' + escapeHtml(k.id) + '">' +
+        '<div class="kw-top">' +
+          '<span class="kw-rank ' + cls + '">' + txt + '</span>' +
+          '<span class="kw-key">' + escapeHtml(k.keyword) + '</span>' +
+        '</div>' +
+        (k.post ? '<p class="kw-post">' + escapeHtml(k.post) + '</p>' : '') +
+        (k.memo ? '<p class="kw-note">' + escapeHtml(k.memo) + '</p>' : '') +
+        '<div class="kw-meta">' +
+          '<span>' + (k.date ? k.date.split('-').join('.') + ' 확인' : '확인일 없음') + '</span>' +
+          '<span class="acts">' +
+            '<button class="copy-mini" data-kwcopy="' + escapeHtml(k.id) + '">키워드 복사</button>' +
+            '<button class="copy-mini" data-kwedit="' + escapeHtml(k.id) + '">수정</button>' +
+            '<button class="copy-mini" data-kwdel="' + escapeHtml(k.id) + '" style="background:#FDEBE7;color:#CF5340">삭제</button>' +
+          '</span>' +
+        '</div>' +
+      '</div>';
+    }).join('');
+  }
+
+  function kwRenderForm(){
+    $('#kwFormTitle').textContent = kwEditId ? '키워드 수정' : '키워드 추가';
+    $('#kwFormMode').textContent = kwEditId ? '수정 중' : '';
+    $('#kwSave').innerHTML = '<svg class="ic"><use href="#i-' + (kwEditId ? 'check' : 'plus') + '"></use></svg>' + (kwEditId ? '수정 저장' : '노트 저장');
+    $('#kwCancel').hidden = !kwEditId;
+  }
+  function kwResetForm(){
+    kwEditId = null;
+    $('#kwKey').value = '';
+    $('#kwRank').value = '';
+    $('#kwPost').value = '';
+    $('#kwMemo').value = '';
+    $('#kwDate').value = TODAY;
+    kwRenderForm();
+  }
+
+  $('#kwSave').addEventListener('click', () => {
+    const key = ($('#kwKey').value || '').trim();
+    if (!key) { toast('타겟 키워드를 적어 주세요'); $('#kwKey').focus(); return; }
+    const lower = key.toLowerCase();
+    const dup = kwNotes.find(x => x.keyword.toLowerCase() === lower && x.id !== kwEditId);
+    if (dup) { toast('이미 노트에 있는 키워드예요'); $('#kwKey').focus(); return; }
+    const payload = {
+      keyword: key,
+      rank: Math.max(0, Math.round(num($('#kwRank').value))),
+      post: ($('#kwPost').value || '').trim(),
+      memo: ($('#kwMemo').value || '').trim(),
+      date: kitIsDate($('#kwDate').value) ? $('#kwDate').value : TODAY
+    };
+    if (kwEditId) {
+      const row = kwNotes.find(x => x.id === kwEditId);
+      if (row) Object.assign(row, payload);
+      toast('키워드 노트를 고쳤어요');
+    } else {
+      kwNotes.push(Object.assign({ id: uid() }, payload));
+      toast('키워드 노트를 저장했어요');
+    }
+    writeLS(KEY.kw, kwNotes);
+    kwResetForm();
+    renderKw();
+  });
+  $('#kwCancel').addEventListener('click', () => { kwResetForm(); toast('수정을 취소했어요'); });
+  $('#kwKey').addEventListener('keydown', e => {
+    if (e.key === 'Enter') { e.preventDefault(); $('#kwSave').click(); }
+  });
+
+  $('#kwList').addEventListener('click', e => {
+    const copy = e.target.closest('[data-kwcopy]');
+    if (copy) {
+      const row = kwNotes.find(x => x.id === copy.getAttribute('data-kwcopy'));
+      if (row) copyText(row.keyword);
+      return;
+    }
+    const edit = e.target.closest('[data-kwedit]');
+    if (edit) {
+      const row = kwNotes.find(x => x.id === edit.getAttribute('data-kwedit'));
+      if (!row) return;
+      kwEditId = row.id;
+      $('#kwKey').value = row.keyword;
+      $('#kwRank').value = row.rank ? String(row.rank) : '';
+      $('#kwPost').value = row.post;
+      $('#kwMemo').value = row.memo;
+      $('#kwDate').value = row.date || TODAY;
+      kwRenderForm();
+      $('#kwFormCard').scrollIntoView({ behavior: 'smooth', block: 'center' });
+      $('#kwKey').focus({ preventScroll: true });
+      return;
+    }
+    const del = e.target.closest('[data-kwdel]');
+    if (!del) return;
+    if (del.getAttribute('data-armed') === '1') {
+      const id = del.getAttribute('data-kwdel');
+      kwNotes = kwNotes.filter(x => x.id !== id);
+      writeLS(KEY.kw, kwNotes);
+      if (kwEditId === id) kwResetForm();
+      renderKw();
+      toast('삭제했어요');
+    } else {
+      del.setAttribute('data-armed', '1');
+      del.textContent = '삭제?';
+      setTimeout(() => {
+        if (!del.isConnected) return;
+        del.removeAttribute('data-armed');
+        del.textContent = '삭제';
+      }, 2600);
+    }
+  });
+
+  /* ---------- 인스타 팔로워 월별 성장 (달마다 몇 명 늘었나) ---------- */
+  function igMonthly(){
+    const map = {};
+    allRecords().forEach(r => {
+      const mk = String(r.date || '').slice(0, 7);
+      if (mk.length !== 7 || mk.charAt(4) !== '-') return;
+      const v = num(r.insta);
+      if (v <= 0) return;
+      if (!map[mk] || String(r.date) > String(map[mk].date)) map[mk] = { date: String(r.date), insta: v };
+    });
+    const keys = Object.keys(map).sort();
+    return keys.map((mk, i) => {
+      const cur = map[mk];
+      const prev = i > 0 ? map[keys[i - 1]] : null;
+      return {
+        month: mk,
+        date: cur.date,
+        insta: cur.insta,
+        prev: prev ? prev.insta : null,
+        diff: prev ? cur.insta - prev.insta : null
+      };
+    });
+  }
+
+  function renderIgMonth(){
+    const box = $('#igMonthList');
+    if (!box) return;
+    const list = igMonthly();
+    $('#igMonthCount').textContent = list.length ? list.length + '개월' : '';
+    if (!list.length) {
+      box.innerHTML = '<div class="empty">인스타 팔로워 기록이 없어요<br><b>기록 추가</b>로 숫자를 남기면<br>달마다 몇 명 늘었는지 보여드려요</div>';
+      $('#igMonthFoot').textContent = '';
+      return;
+    }
+    const max = Math.max.apply(null, list.map(x => x.insta)) || 1;
+    const rows = list.slice().reverse();
+    box.innerHTML = rows.map((x, idx) => {
+      const cur = idx === 0;
+      const w = Math.max(8, Math.round((x.insta / max) * 100));
+      const tag = cur ? (x.prev === null ? '기준월' : '최근') : '';
+      let delta;
+      if (x.prev === null) delta = '<span class="ig-delta">첫 기록</span>';
+      else if (x.diff === 0) delta = '<span class="ig-delta">변동 없음</span>';
+      else {
+        const sign = x.diff > 0 ? '+' : '−';
+        let pct = '';
+        if (x.prev > 0) pct = ' (' + (x.diff > 0 ? '+' : '−') + Math.abs((x.diff / x.prev) * 100).toFixed(1) + '%)';
+        delta = '<span class="ig-delta ' + (x.diff > 0 ? 'up' : 'down') + '">' + sign + fmt(Math.abs(x.diff)) + '명' + pct + '</span>';
+      }
+      const monTxt = x.month.slice(0, 4) + '년 ' + Number(x.month.slice(5, 7)) + '월';
+      return '<div class="ig-row' + (cur ? ' cur' : '') + '">' +
+        '<div class="ig-left">' +
+          '<div class="ig-mon">' + monTxt + (tag ? ' <em>' + tag + '</em>' : '') + '</div>' +
+          '<div class="ig-bar"><i style="width:' + w + '%"></i></div>' +
+        '</div>' +
+        '<div class="ig-right">' +
+          '<div class="ig-num">' + fmt(x.insta) + '<small>명</small></div>' + delta +
+        '</div>' +
+      '</div>';
+    }).join('');
+    $('#igMonthFoot').textContent = list.length === 1
+      ? '기록이 한 달치라 증감은 다음 달 기록이 쌓이면 자동으로 계산돼요'
+      : '각 달 마지막 기록 기준 · 새 기록을 남기면 바로 다시 계산돼요';
   }
 
   /* ================= 선택형 PIN 잠금 (4자리 숫자) =================
@@ -3733,6 +5314,15 @@
   renderRecycle();
   renderStStyles();
   renderStFonts();
+  renderStTlRows();
+  renderStTlPresets();
+  renderKitCats();
+  renderKit();
+  renderKitPosts();
+  renderPitch();
+  renderKw();
+  $('#kwDate').value = TODAY;
+  kitLoadFonts();
   stPhotoUI('');
   stLoadFonts();
   $('#rcDate').value = TODAY;
@@ -3742,7 +5332,8 @@
   const savedMore = readLS(KEY.more, 'caption');
   showMore(['caption', 'check', 'sponsor'].indexOf(savedMore) >= 0 ? savedMore : 'caption');
   const savedRc = readLS(KEY.rcSeg, 'board');
-  showRc(savedRc === 'studio' ? 'studio' : 'board');
+  showRc(savedRc);
+  showGen(readLS(KEY.genSeg, 'tag'));
 
   lockRenderHeader();
   if (lockEnabled()) lockShow();

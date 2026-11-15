@@ -1,7 +1,7 @@
 {
   "name": "도토리하루 매니저",
   "short_name": "도토리하루",
-  "description": "도토리하루 블로그·인스타 성장 기록, 제목·태그, 캡션을 한 곳에서",
+  "description": "도토리하루 블로그·인스타 성장 기록, 제목·태그, 미디어 킷, 신청 문구를 한 곳에서",
   "lang": "ko-KR",
   "dir": "ltr",
   "start_url": "./index.html",

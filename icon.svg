@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="도토리하루 도토리 아이콘">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#EAF9F1"/>
+      <stop offset="55%" stop-color="#F7FBE9"/>
+      <stop offset="100%" stop-color="#FFF6DC"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0.25" y1="0" x2="0.75" y2="1">
+      <stop offset="0%" stop-color="#FCE7C6"/>
+      <stop offset="100%" stop-color="#EFC795"/>
+    </linearGradient>
+    <linearGradient id="cap" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0%" stop-color="#B08A6A"/>
+      <stop offset="100%" stop-color="#8B5E3C"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" fill="url(#bg)"/>
+
+  <circle cx="86" cy="96" r="26" fill="#FFFFFF" opacity="0.65"/>
+  <circle cx="122" cy="96" r="34" fill="#FFFFFF" opacity="0.65"/>
+  <circle cx="158" cy="98" r="24" fill="#FFFFFF" opacity="0.65"/>
+  <circle cx="432" cy="430" r="30" fill="#FFFFFF" opacity="0.5"/>
+  <circle cx="396" cy="442" r="22" fill="#FFFFFF" opacity="0.5"/>
+  <path d="M420 116l5 11 12 2-9 8 2 12-10-6-11 6 2-12-9-8 12-2z" fill="#FFE58F"/>
+  <path d="M96 400l4 9 10 2-7 7 2 10-9-5-9 5 2-10-7-7 10-2z" fill="#FFB5A7" opacity="0.8"/>
+
+  <path d="M258 178c0-26-20-46-46-46 0 26 20 46 46 46z" fill="#8AD8B5"/>
+  <path d="M256 180c0-22 17-40 40-40 0 22-17 40-40 40z" fill="#A5E3C4"/>
+  <path d="M257 190v26" stroke="#8B5E3C" stroke-width="14" stroke-linecap="round"/>
+
+  <path d="M168 246c0 0 8 84 27 128 17 40 38 58 61 58s44-18 61-58c19-44 27-128 27-128z"
+        fill="url(#body)" stroke="#DCB183" stroke-width="7" stroke-linejoin="round"/>
+
+  <ellipse cx="214" cy="308" rx="16" ry="28" fill="#FFFFFF" opacity="0.5" transform="rotate(-12 214 308)"/>
+
+  <ellipse cx="231" cy="318" rx="8" ry="10" fill="#6B4B32"/>
+  <ellipse cx="281" cy="318" rx="8" ry="10" fill="#6B4B32"/>
+  <path d="M244 344q12 13 24 0" fill="none" stroke="#6B4B32" stroke-width="7" stroke-linecap="round"/>
+  <ellipse cx="205" cy="341" rx="13" ry="8" fill="#FFB5A7" opacity="0.75"/>
+  <ellipse cx="307" cy="341" rx="13" ry="8" fill="#FFB5A7" opacity="0.75"/>
+
+  <path d="M136 238c0-62 55-96 120-96s120 34 120 96c0 11-9 18-22 18H158c-13 0-22-7-22-18z"
+        fill="url(#cap)"/>
+  <path d="M140 236c44 24 188 24 232 0" fill="none" stroke="#6F4A2E" stroke-width="6" stroke-linecap="round" opacity="0.45"/>
+  <g stroke="#D8B48E" stroke-width="6" stroke-linecap="round" opacity="0.5">
+    <path d="M186 208l14-20"/>
+    <path d="M230 200l14-20"/>
+    <path d="M274 198l14-20"/>
+    <path d="M318 206l14-20"/>
+  </g>
+</svg>

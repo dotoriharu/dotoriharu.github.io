@@ -1,0 +1,19 @@
+{
+  "name": "도토리하루 매니저",
+  "short_name": "도토리하루",
+  "description": "도토리하루 블로그·인스타 성장 기록, 제목·태그, 캡션을 한 곳에서",
+  "lang": "ko-KR",
+  "dir": "ltr",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FFF8EE",
+  "theme_color": "#6B4423",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

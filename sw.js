@@ -1,5 +1,5 @@
 /* 도토리하루 매니저 · 오프라인 캐시 (https 에서만 동작) */
-const CACHE = 'dotori-v5';
+const CACHE = 'dotori-v6';
 const ASSETS = ['./', './index.html', './manifest.json', './icon-180.png?v=2', './icon-192.png?v=2', './icon-512.png?v=2'];
 
 self.addEventListener('install', event => {

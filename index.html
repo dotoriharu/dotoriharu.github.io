@@ -126,18 +126,21 @@
   .save-dot.flash{background:var(--mint-soft);color:#3E7E64;border-color:#CBEEDD}
   .save-dot.flash::before{background:var(--mint-deep)}
 
-  /* ===== hero ===== */
-  .hero{
-    position:relative;overflow:hidden;border-radius:26px;padding:14px 16px;margin-bottom:12px;
-    background:linear-gradient(140deg,#E7F7EF 0%,#F7FBEF 46%,#FFF7DA 100%);
+  /* ===== 공통 탭 헤드 ===== */
+  .tab-head{
+    position:relative;display:flex;align-items:center;gap:11px;overflow:hidden;
+    border-radius:24px;padding:12px 14px;margin-bottom:12px;
+    background:linear-gradient(140deg,#E7F7EF 0%,#F8FBEF 54%,#FFF7DA 100%);
     border:2px solid #EFF6E8;box-shadow:var(--shadow-sm);
   }
-  .hero-txt{position:relative;z-index:2;max-width:74%}
-  .hero-hi{font-family:var(--font-display);font-synthesis-weight:none;font-size:16px;font-weight:700;color:#4F6E5C;letter-spacing:-.4px}
-  .hero-sub{font-size:11.5px;color:#8C9B8A;margin-top:3px;line-height:1.5}
-  .hero-art{position:absolute;right:8px;bottom:-4px;width:96px;height:78px;color:#7FC7A7;opacity:.95}
-  .hero-art .c2{color:#F2D98B}
-  .hero-art .c3{color:#FFB5A7}
+  .tab-head .th-ic{
+    width:38px;height:38px;flex:0 0 38px;border-radius:13px;background:#FFFFFFC4;
+    border:1.5px solid #FFFFFF;display:flex;align-items:center;justify-content:center;color:#5A8E74;
+  }
+  .tab-head .th-ic .ic{width:19px;height:19px}
+  .tab-head .th-txt{min-width:0}
+  .tab-head .th-title{font-family:var(--font-display);font-synthesis-weight:none;font-size:18px;font-weight:800;color:#3F5E4E;letter-spacing:-.6px;line-height:1.2}
+  .tab-head .th-sub{font-size:11px;color:#8A9B8E;margin-top:2px;line-height:1.45;letter-spacing:-.1px;word-break:keep-all}
 
   /* ===== cards ===== */
   .card{
@@ -352,8 +355,8 @@
   }
   .tabbar-inner{display:flex;height:calc(var(--tabbar-h) - 10px)}
   .tab-btn{
-    flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
-    color:#B3A491;font-size:10px;font-weight:800;letter-spacing:-.2px;transition:.16s;
+    flex:1;flex-direction:column;display:flex;align-items:center;justify-content:center;gap:3px;
+    color:#B3A491;font-size:10.5px;font-weight:800;letter-spacing:-.3px;transition:.16s;
     border-radius:20px;
   }
   .tab-btn .ic{width:19px;height:19px}
@@ -476,8 +479,8 @@
   /* ===== recycle board ===== */
   .rc-hero{
     position:relative;overflow:hidden;border-radius:24px;padding:14px 15px;margin-bottom:12px;
-    background:linear-gradient(140deg,#E7F7EF 0%,#FCFBEE 58%,#FFF7DA 100%);
-    border:2px solid #EFF6E8;box-shadow:var(--shadow-sm);
+    background:#F5FBF7;
+    border:2px solid #E7F3EC;box-shadow:none;
   }
   .rc-hero .lbl{font-size:10.5px;font-weight:800;color:#7E9B88;display:flex;align-items:center;gap:5px;letter-spacing:-.1px}
   .rc-hero .lbl .ic{width:14px;height:14px}
@@ -624,8 +627,8 @@
 
   .kw-hero{
     position:relative;overflow:hidden;border-radius:24px;padding:14px 15px;margin-bottom:12px;
-    background:linear-gradient(140deg,#E9F7F0 0%,#FCFBEE 56%,#FDF2E3 100%);
-    border:2px solid #EFF6E8;box-shadow:var(--shadow-sm);
+    background:#F5FBF7;
+    border:2px solid #E7F3EC;box-shadow:none;
   }
   .kw-hero .lbl{font-size:10.5px;font-weight:800;color:#6F8F7C;display:flex;align-items:center;gap:5px;letter-spacing:-.1px}
   .kw-hero .lbl .ic{width:14px;height:14px}
@@ -864,22 +867,15 @@
   </header>
 
   <main>
-    <!-- ================= TAB 1 : TRACKER ================= -->
-    <section id="panel-tracker" class="panel">
-      <div class="hero">
-        <div class="hero-txt">
-          <p class="hero-hi">성빈 님, 오늘도 한 뼘 <svg class="ic" style="width:15px;height:15px;vertical-align:-2px;color:#7FC7A7"><use href="#i-sprout"></use></svg></p>
-          <p class="hero-sub">숫자만 남기면, 자란 만큼 보여드려요</p>
+    <!-- ================= TAB 1 : 성장 ================= -->
+    <section id="panel-growth" class="panel">
+      <div class="tab-head">
+        <span class="th-ic"><svg class="ic"><use href="#i-trend"></use></svg></span>
+        <div class="th-txt">
+          <h2 class="th-title">성장</h2>
+          <p class="th-sub">성빈 님, 오늘도 한 뼘 🌱</p>
         </div>
-        <svg class="hero-art" viewBox="0 0 110 84" aria-hidden="true">
-          <path d="M14 42h30a11.2 11.2 0 0 0 1.2-22.3A15.4 15.4 0 0 0 16.4 23 10.6 10.6 0 0 0 14 42z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" opacity=".55"/>
-          <path d="M74 13l3.4 6.9 7.5 1.1-5.4 5.3 1.3 7.5-6.8-3.6-6.8 3.6 1.3-7.5-5.4-5.3 7.5-1.1z" fill="none" stroke="currentColor" stroke-width="2.2" class="c2"/>
-          <path d="M82 76V58" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" class="c3"/>
-          <path d="M82 61c0-6.9 5.6-12.5 12.5-12.5C94.5 55.4 88.9 61 82 61z" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="round" class="c3"/>
-          <path d="M82 63.5c0-5.4-4.4-9.8-9.8-9.8 0 5.4 4.4 9.8 9.8 9.8z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" class="c3" opacity=".75"/>
-        </svg>
       </div>
-
       <div class="card">
         <div class="card-head">
           <h2><span class="hd-ic peach"><svg class="ic"><use href="#i-acorn"></use></svg></span>오늘 포스팅</h2>
@@ -995,14 +991,24 @@
       </div>
     </section>
 
-    <!-- ================= TAB 2 : GENERATOR ================= -->
-    <section id="panel-generator" class="panel" hidden>
-      <div class="seg" id="genSeg">
-        <button class="is-on" data-gen="tag">제목·태그</button>
-        <button data-gen="keyword">효자 키워드</button>
+    <!-- ================= TAB 2 : 포스팅 ================= -->
+    <section id="panel-posting" class="panel" hidden>
+      <div class="tab-head">
+        <span class="th-ic"><svg class="ic"><use href="#i-pencil"></use></svg></span>
+        <div class="th-txt">
+          <h2 class="th-title">포스팅</h2>
+          <p class="th-sub">제목 · 캡션 · 카드뉴스 · 키워드</p>
+        </div>
+      </div>
+      <div class="seg seg4" id="postSeg">
+        <button class="is-on" data-post="tag">제목·태그</button>
+        <button data-post="caption">캡션</button>
+        <button data-post="cardnews">카드뉴스</button>
+        <button data-post="kwcheck">키워드·체크</button>
       </div>
 
-      <div id="gen-tag">
+      <!-- 제목 · 태그 -->
+      <div id="post-tag">
       <div class="card">
         <div class="card-head"><h2><span class="hd-ic peach"><svg class="ic"><use href="#i-pencil"></use></svg></span>어떤 글인가요</h2></div>
         <div class="chips" id="catChips"></div>
@@ -1039,449 +1045,445 @@
         <div class="tags-box" id="tagBox"></div>
         <p class="hint" style="margin-top:9px">네이버 블로그는 발행 패널의 <b>태그 편집</b>란에 넣어 주세요</p>
       </div>
+      </div>
+
+      <!-- 캡션 -->
+      <div id="post-caption" hidden>
+      <div class="card">
+        <div class="card-head"><h2><span class="hd-ic peach"><svg class="ic"><use href="#i-sparkle"></use></svg></span>캡션 만들기</h2></div>
+        <div class="chips" id="capTypeChips" style="margin-bottom:13px"></div>
+        <div class="field">
+          <label for="capPlace">장소 · 제목</label>
+          <input type="text" id="capPlace" placeholder="예: 천안 신부동 OO카페" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="capPoint">핵심 한 줄</label>
+          <textarea id="capPoint" placeholder="예: 창가 자리에서 커피 한 잔, 주말 오전이 조용해요"></textarea>
+        </div>
+        <div class="field" style="margin-bottom:0">
+          <label for="capLine">감성 한 줄 <span class="muted" style="font-weight:500">(선택)</span></label>
+          <input type="text" id="capLine" placeholder="예: 햇살이 오래 머무는 자리" autocomplete="off">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-head">
+          <h2><span class="hd-ic"><svg class="ic"><use href="#i-note"></use></svg></span>완성된 캡션</h2>
+          <span class="sub" id="capCount"></span>
+        </div>
+        <textarea id="capOut" style="width:100%;min-height:250px;border:2px solid #F7F1E4;border-radius:18px;padding:13px;background:#FCFAF1;font-size:13.2px;line-height:1.8;color:#5C4B3B;resize:vertical"></textarea>
+        <div class="btn-row" style="margin-top:10px">
+          <button class="btn btn-ghost btn-sm" id="capReset">다시 만들기</button>
+          <button class="btn btn-mint btn-sm" id="capCopy"><svg class="ic"><use href="#i-copy"></use></svg>복사하기</button>
+        </div>
+        <p class="hint" style="margin-top:10px">별표·온점 없이 이모지와 줄바꿈만 썼어요 · 저장 CTA 포함</p>
+      </div>
+      </div>
+
+      <!-- 카드뉴스 스튜디오 -->
+      <div id="post-cardnews" hidden>
+      <div class="card">
+        <div class="card-head">
+          <h2><span class="hd-ic butter"><svg class="ic"><use href="#i-frame"></use></svg></span>사진 고르기</h2>
+          <span class="sub">1장</span>
+        </div>
+        <div class="st-photo">
+          <div class="st-thumb" id="stThumb"><svg class="ic"><use href="#i-frame"></use></svg></div>
+          <div class="st-txt">
+            <b id="stPhotoName">아직 사진이 없어요</b>
+            <span>사진첩에서 1장 고르면 4:5로 꽉 채워 담아요</span>
+          </div>
+        </div>
+        <div class="st-btns">
+          <button class="btn btn-primary btn-sm" id="stPick"><svg class="ic"><use href="#i-up"></use></svg>사진 고르기</button>
+          <button class="btn btn-ghost btn-sm" id="stClear" hidden>비우기</button>
+        </div>
+        <input type="file" id="stFile" accept="image/*" hidden>
+      </div>
 
       <div class="card">
-        <div class="card-head"><h2><span class="hd-ic"><svg class="ic"><use href="#i-check"></use></svg></span>발행 전 서식 체크</h2><span class="sub">도토리하루 기준</span></div>
-        <div id="miniCheck"></div>
-      </div>
-      </div>
-
-      <!-- ---------- 효자 키워드 · 검색 순위 노트 ---------- -->
-      <div id="gen-keyword" hidden>
-        <div class="kw-hero">
-          <span class="lbl"><svg class="ic"><use href="#i-search"></use></svg>효자 키워드 · 검색 순위 노트</span>
-          <p class="kw-sum" id="kwSum">공들인 글의 키워드와 순위를 적어 두면 효자 키워드가 보여요</p>
+        <div class="card-head"><h2><span class="hd-ic"><svg class="ic"><use href="#i-sparkle"></use></svg></span>글꼴 · 스타일</h2><span class="sub" id="stFontLabel"></span></div>
+        <div class="field" style="margin-bottom:14px">
+          <label>글꼴</label>
+          <div class="chips" id="stFontChips"></div>
+        </div>
+        <div class="field" style="margin-bottom:0">
+          <label>스타일</label>
+          <div class="chips" id="stStyleChips"></div>
+        </div>
+        <div class="divider"></div>
+        <div class="field">
+          <label for="stTitle">제목 <span class="muted" style="font-weight:500">(두 줄까지 크게)</span></label>
+          <textarea id="stTitle" placeholder="예: 햇살이 오래 머무는 자리" style="min-height:58px"></textarea>
+        </div>
+        <div class="field">
+          <label for="stSub">한 줄 요약 <span class="muted" style="font-weight:500">(선택)</span></label>
+          <input type="text" id="stSub" placeholder="예: 주말 오전, 창가 자리가 제일 좋아요" autocomplete="off">
+        </div>
+        <div class="field" style="margin-bottom:0">
+          <label for="stTag">하단 태그</label>
+          <input type="text" id="stTag" placeholder="@dotori_haru" autocomplete="off">
         </div>
 
-        <div class="card">
-          <div class="card-head">
-            <h2><span class="hd-ic"><svg class="ic"><use href="#i-trend"></use></svg></span>노트</h2>
-            <span class="sub" id="kwCount"></span>
-          </div>
-          <div id="kwList"></div>
-        </div>
-
-        <div class="card" id="kwFormCard">
-          <div class="card-head">
-            <h2><span class="hd-ic peach"><svg class="ic"><use href="#i-plus"></use></svg></span><span id="kwFormTitle">키워드 추가</span></h2>
-            <span class="sub" id="kwFormMode"></span>
-          </div>
-          <div class="field">
-            <label for="kwKey">타겟 키워드</label>
-            <input type="text" id="kwKey" placeholder="예: 천안 카페 추천" autocomplete="off">
-          </div>
-          <div class="two-col">
-            <div class="field" style="margin-bottom:12px">
-              <label for="kwRank">네이버 검색 순위</label>
-              <input type="number" class="input-num" id="kwRank" inputmode="numeric" placeholder="예: 3">
-            </div>
-            <div class="field" style="margin-bottom:12px">
-              <label for="kwDate">확인한 날</label>
-              <input type="date" id="kwDate">
-            </div>
-          </div>
-          <div class="field">
-            <label for="kwPost">공들인 글 <span class="muted" style="font-weight:500">(선택)</span></label>
-            <input type="text" id="kwPost" placeholder="글 제목이나 링크" autocomplete="off">
-          </div>
-          <div class="field">
-            <label for="kwMemo">유입 메모 <span class="muted" style="font-weight:500">(선택)</span></label>
-            <textarea id="kwMemo" placeholder="예: 발행 3일 만에 1위, 하루 유입 40명"></textarea>
-          </div>
-          <div class="btn-row">
-            <button class="btn btn-ghost" id="kwCancel" hidden>취소</button>
-            <button class="btn btn-mint" id="kwSave"><svg class="ic"><use href="#i-plus"></use></svg>노트 저장</button>
-          </div>
-          <p class="hint" style="margin-top:10px">순위는 1~30위만 적어도 돼요 · 못 찾으면 비워 두면 순위 밖으로 남아요</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= TAB 3 : CHECKLIST / CAPTION / MEMO ================= -->
-    <section id="panel-more" class="panel" hidden>
-      <div class="seg" id="moreSeg">
-        <button class="is-on" data-more="caption">캡션 템플릿</button>
-        <button data-more="check">엔딩 체크</button>
-        <button data-more="sponsor">협찬 기록</button>
-      </div>
-
-      <!-- caption -->
-      <div id="more-caption">
-        <div class="card">
-          <div class="card-head"><h2><span class="hd-ic peach"><svg class="ic"><use href="#i-sparkle"></use></svg></span>캡션 만들기</h2></div>
-          <div class="chips" id="capTypeChips" style="margin-bottom:13px"></div>
-          <div class="field">
-            <label for="capPlace">장소 · 제목</label>
-            <input type="text" id="capPlace" placeholder="예: 천안 신부동 OO카페" autocomplete="off">
-          </div>
-          <div class="field">
-            <label for="capPoint">핵심 한 줄</label>
-            <textarea id="capPoint" placeholder="예: 창가 자리에서 커피 한 잔, 주말 오전이 조용해요"></textarea>
-          </div>
-          <div class="field" style="margin-bottom:0">
-            <label for="capLine">감성 한 줄 <span class="muted" style="font-weight:500">(선택)</span></label>
-            <input type="text" id="capLine" placeholder="예: 햇살이 오래 머무는 자리" autocomplete="off">
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-head">
-            <h2><span class="hd-ic"><svg class="ic"><use href="#i-note"></use></svg></span>완성된 캡션</h2>
-            <span class="sub" id="capCount"></span>
-          </div>
-          <textarea id="capOut" style="width:100%;min-height:250px;border:2px solid #F7F1E4;border-radius:18px;padding:13px;background:#FCFAF1;font-size:13.2px;line-height:1.8;color:#5C4B3B;resize:vertical"></textarea>
-          <div class="btn-row" style="margin-top:10px">
-            <button class="btn btn-ghost btn-sm" id="capReset">다시 만들기</button>
-            <button class="btn btn-mint btn-sm" id="capCopy"><svg class="ic"><use href="#i-copy"></use></svg>복사하기</button>
-          </div>
-          <p class="hint" style="margin-top:10px">별표·온점 없이 이모지와 줄바꿈만 썼어요 · 저장 CTA 포함</p>
-        </div>
-      </div>
-
-      <!-- checklist -->
-      <div id="more-check" hidden>
-        <div class="card">
-          <div class="card-head">
-            <h2><span class="hd-ic"><svg class="ic"><use href="#i-check"></use></svg></span>발행 체크리스트</h2>
-            <button class="copy-mini" id="checkReset">초기화</button>
-          </div>
-          <div class="progress"><div class="bar"><i id="checkBar" style="width:0%"></i></div><span id="checkPct">0/0</span></div>
-          <div id="checkList"></div>
-        </div>
-      </div>
-
-      <!-- sponsorship / collaboration tracker -->
-      <div id="more-sponsor" hidden>
-        <div class="sp-hero">
-          <span class="lbl"><svg class="ic"><use href="#i-leaf"></use></svg>체험단 협찬 · 협업 기록</span>
-          <div class="sp-total"><b id="spTotal">0</b><span>원</span></div>
-          <p class="sp-total-sub" id="spTotalSub">아직 기록이 없어요</p>
-          <div class="sp-cats" id="spCats"></div>
-        </div>
-
-        <div class="card">
-          <div class="card-head">
-            <h2><span class="hd-ic"><svg class="ic"><use href="#i-note"></use></svg></span>협찬 목록</h2>
-            <button class="copy-mini" id="spCsv"><svg class="ic ic-xs"><use href="#i-down"></use></svg>CSV</button>
-          </div>
-          <div class="chips" id="spFilter" style="margin-bottom:12px"></div>
-          <div id="spList"></div>
-        </div>
-
-        <div class="card" id="spFormCard">
-          <div class="card-head">
-            <h2><span class="hd-ic peach"><svg class="ic"><use href="#i-plus"></use></svg></span><span id="spFormTitle">협찬 추가</span></h2>
-            <span class="sub" id="spFormMode"></span>
-          </div>
-          <div class="field">
-            <label for="spName">항목명 (매장 · 숙소 · 제품)</label>
-            <input type="text" id="spName" placeholder="예: 신부동 브런치집 / 강릉 오션뷰 스테이" autocomplete="off">
-          </div>
-          <div class="two-col">
-            <div class="field" style="margin-bottom:12px">
-              <label for="spDate">다녀온 날</label>
-              <input type="date" id="spDate">
-            </div>
-            <div class="field" style="margin-bottom:12px">
-              <label for="spAmount">협찬 금액 (원)</label>
-              <input type="number" class="input-num" id="spAmount" inputmode="numeric" placeholder="0">
-            </div>
-          </div>
-          <div class="field">
-            <label>카테고리</label>
-            <div class="chips" id="spCatChips"></div>
-          </div>
-          <div class="field">
-            <label>상태</label>
-            <div class="chips" id="spStatusChips"></div>
-          </div>
-          <div class="field">
-            <label for="spNote">메모</label>
-            <textarea id="spNote" placeholder="제공 내역, 리뷰 마감일, 링크 등"></textarea>
-          </div>
-          <div class="btn-row">
-            <button class="btn btn-ghost" id="spCancel" hidden>취소</button>
-            <button class="btn btn-mint" id="spSave"><svg class="ic"><use href="#i-plus"></use></svg>기록 저장</button>
-          </div>
-          <p class="hint" style="margin-top:10px">금액은 0원으로 두고 나중에 채워도 돼요 · CSV는 엑셀에서 그대로 열려요</p>
-        </div>
-      </div>
-    </section>
-    <!-- ================= TAB 4 : RECYCLE BOARD / CARD NEWS STUDIO ================= -->
-    <section id="panel-recycle" class="panel" hidden>
-      <div class="seg seg4" id="rcSeg">
-        <button class="is-on" data-rc="board">재활용</button>
-        <button data-rc="studio">카드뉴스</button>
-        <button data-rc="kit">미디어킷</button>
-        <button data-rc="pitch">신청멘트</button>
-      </div>
-
-      <!-- ---------- board ---------- -->
-      <div id="rc-board">
-        <div class="rc-hero">
-          <span class="lbl"><svg class="ic"><use href="#i-remake"></use></svg>블로그 → 인스타 재활용</span>
-          <p class="rc-sum" id="rcSum">아직 등록된 글이 없어요</p>
-          <div class="rc-bar"><i id="rcBar" style="width:0%"></i></div>
-          <div class="rc-types" id="rcTypes"></div>
-        </div>
-
-        <div class="card">
-          <div class="card-head">
-            <h2><span class="hd-ic"><svg class="ic"><use href="#i-remake"></use></svg></span>재활용 목록</h2>
-            <span class="sub" id="rcCount"></span>
-          </div>
-          <div class="rc-search">
-            <svg class="ic"><use href="#i-search"></use></svg>
-            <input type="text" id="rcSearch" placeholder="제목으로 찾기 (예: 순천, 다이소)" autocomplete="off">
-          </div>
-          <div id="rcList"></div>
-          <button class="btn btn-ghost btn-sm btn-block" id="rcMore" style="margin-top:8px" hidden>더 보기</button>
-          <button class="btn btn-ghost btn-sm btn-block" id="rcRestore" style="margin-top:8px" hidden>숨긴 자동 글 되돌리기</button>
-        </div>
-
-        <div class="card">
-          <div class="card-head">
-            <h2><span class="hd-ic peach"><svg class="ic"><use href="#i-plus"></use></svg></span>발행한 글 등록</h2>
-            <span class="sub" id="rcAutoNote"></span>
-          </div>
-          <div class="field">
-            <label for="rcTitle">글 제목</label>
-            <input type="text" id="rcTitle" placeholder="예: 순천 1박 2일 뚜벅이 총정리" autocomplete="off">
-          </div>
-          <div class="two-col">
-            <div class="field" style="margin-bottom:11px">
-              <label for="rcDate">발행일</label>
-              <input type="date" id="rcDate">
-            </div>
-            <div class="field" style="margin-bottom:11px">
-              <label for="rcLink">링크 · 메모</label>
-              <input type="text" id="rcLink" placeholder="blog.naver.com/..." autocomplete="off">
-            </div>
-          </div>
-          <button class="btn btn-mint btn-block" id="rcAdd"><svg class="ic"><use href="#i-plus"></use></svg>보드에 추가</button>
-          <p class="hint" style="margin-top:10px">제목만 있어도 추가돼요 · 카드뉴스·스레드·릴스는 누를 때마다 바로 저장됩니다</p>
-        </div>
-      </div>
-
-      <!-- ---------- studio ---------- -->
-      <div id="rc-studio" hidden>
-        <div class="card">
-          <div class="card-head">
-            <h2><span class="hd-ic butter"><svg class="ic"><use href="#i-frame"></use></svg></span>사진 고르기</h2>
-            <span class="sub">1장</span>
-          </div>
-          <div class="st-photo">
-            <div class="st-thumb" id="stThumb"><svg class="ic"><use href="#i-frame"></use></svg></div>
-            <div class="st-txt">
-              <b id="stPhotoName">아직 사진이 없어요</b>
-              <span>사진첩에서 1장 고르면 4:5로 꽉 채워 담아요</span>
-            </div>
-          </div>
-          <div class="st-btns">
-            <button class="btn btn-primary btn-sm" id="stPick"><svg class="ic"><use href="#i-up"></use></svg>사진 고르기</button>
-            <button class="btn btn-ghost btn-sm" id="stClear" hidden>비우기</button>
-          </div>
-          <input type="file" id="stFile" accept="image/*" hidden>
-        </div>
-
-        <div class="card">
-          <div class="card-head"><h2><span class="hd-ic"><svg class="ic"><use href="#i-sparkle"></use></svg></span>글꼴 · 스타일</h2><span class="sub" id="stFontLabel"></span></div>
-          <div class="field" style="margin-bottom:14px">
-            <label>글꼴</label>
-            <div class="chips" id="stFontChips"></div>
-          </div>
-          <div class="field" style="margin-bottom:0">
-            <label>스타일</label>
-            <div class="chips" id="stStyleChips"></div>
-          </div>
+        <!-- ④ 여행 동선 타임라인 입력 -->
+        <div id="stTlBox" hidden>
           <div class="divider"></div>
           <div class="field">
-            <label for="stTitle">제목 <span class="muted" style="font-weight:500">(두 줄까지 크게)</span></label>
-            <textarea id="stTitle" placeholder="예: 햇살이 오래 머무는 자리" style="min-height:58px"></textarea>
+            <label for="stTlCap">상단 작은 문구</label>
+            <input type="text" id="stTlCap" placeholder="예: 낮부터 밤까지" autocomplete="off">
           </div>
-          <div class="field">
-            <label for="stSub">한 줄 요약 <span class="muted" style="font-weight:500">(선택)</span></label>
-            <input type="text" id="stSub" placeholder="예: 주말 오전, 창가 자리가 제일 좋아요" autocomplete="off">
+          <div class="field" style="margin-bottom:9px">
+            <label>동선 <span class="muted" style="font-weight:500">(장소 · 이동은 선택)</span></label>
+            <div id="stTlRows"></div>
+            <button class="btn btn-ghost btn-sm btn-block" id="stTlAdd" style="margin-top:3px"><svg class="ic"><use href="#i-plus"></use></svg>장소 추가</button>
           </div>
           <div class="field" style="margin-bottom:0">
-            <label for="stTag">하단 태그</label>
-            <input type="text" id="stTag" placeholder="@dotori_haru" autocomplete="off">
+            <label>이동 빠른 입력 <span class="muted" style="font-weight:500">(이동 칸을 누른뒤 칩을 누르면 그대로 들어가요)</span></label>
+            <div class="chips tl-presets" id="stTlPresets"></div>
           </div>
+          <p class="hint" style="margin-top:9px">장소만 적어도 코스표로 깔끔하게 나와요 · 이동을 적으면 오른쪽에 같이 보여요</p>
+        </div>
 
-          <!-- ④ 여행 동선 타임라인 입력 -->
-          <div id="stTlBox" hidden>
-            <div class="divider"></div>
-            <div class="field">
-              <label for="stTlCap">상단 작은 문구</label>
-              <input type="text" id="stTlCap" placeholder="예: 낮부터 밤까지" autocomplete="off">
+        <!-- ⑤ 여행 스팟 체크리스트 입력 -->
+        <div id="stCkBox" hidden>
+          <div class="divider"></div>
+          <div class="field">
+            <label for="stCkIntro">짧은 소개 <span class="muted" style="font-weight:500">(2~3줄)</span></label>
+            <textarea id="stCkIntro" placeholder="혼자만의 시간을 보내기 좋은 소도시라면 충북 제천, 조용한 쉼을 찾아 떠나기 좋은 여행지예요"></textarea>
+          </div>
+          <div class="two-col">
+            <div class="field" style="margin-bottom:12px">
+              <label for="stCkA">왼쪽 목록 제목</label>
+              <input type="text" id="stCkA" placeholder="관광 · 쇼핑 스폿" autocomplete="off">
             </div>
-            <div class="field" style="margin-bottom:9px">
-              <label>동선 <span class="muted" style="font-weight:500">(장소 · 이동은 선택)</span></label>
-              <div id="stTlRows"></div>
-              <button class="btn btn-ghost btn-sm btn-block" id="stTlAdd" style="margin-top:3px"><svg class="ic"><use href="#i-plus"></use></svg>장소 추가</button>
+            <div class="field" style="margin-bottom:12px">
+              <label for="stCkB">오른쪽 목록 제목</label>
+              <input type="text" id="stCkB" placeholder="카페" autocomplete="off">
+            </div>
+          </div>
+          <div class="two-col">
+            <div class="field" style="margin-bottom:0">
+              <label for="stCkAItems">왼쪽 항목 <span class="muted" style="font-weight:500">(한 줄에 하나)</span></label>
+              <textarea id="stCkAItems" placeholder="안녕,책&#10;책방소설 novella" style="min-height:96px"></textarea>
             </div>
             <div class="field" style="margin-bottom:0">
-              <label>이동 빠른 입력 <span class="muted" style="font-weight:500">(이동 칸을 누른뒤 칩을 누르면 그대로 들어가요)</span></label>
-              <div class="chips tl-presets" id="stTlPresets"></div>
-            </div>
-            <p class="hint" style="margin-top:9px">장소만 적어도 코스표로 깔끔하게 나와요 · 이동을 적으면 오른쪽에 같이 보여요</p>
-          </div>
-
-          <!-- ⑤ 여행 스팟 체크리스트 입력 -->
-          <div id="stCkBox" hidden>
-            <div class="divider"></div>
-            <div class="field">
-              <label for="stCkIntro">짧은 소개 <span class="muted" style="font-weight:500">(2~3줄)</span></label>
-              <textarea id="stCkIntro" placeholder="혼자만의 시간을 보내기 좋은 소도시라면 충북 제천, 조용한 쉼을 찾아 떠나기 좋은 여행지예요"></textarea>
-            </div>
-            <div class="two-col">
-              <div class="field" style="margin-bottom:12px">
-                <label for="stCkA">왼쪽 목록 제목</label>
-                <input type="text" id="stCkA" placeholder="관광 · 쇼핑 스폿" autocomplete="off">
-              </div>
-              <div class="field" style="margin-bottom:12px">
-                <label for="stCkB">오른쪽 목록 제목</label>
-                <input type="text" id="stCkB" placeholder="카페" autocomplete="off">
-              </div>
-            </div>
-            <div class="two-col">
-              <div class="field" style="margin-bottom:0">
-                <label for="stCkAItems">왼쪽 항목 <span class="muted" style="font-weight:500">(한 줄에 하나)</span></label>
-                <textarea id="stCkAItems" placeholder="안녕,책&#10;책방소설 novella" style="min-height:96px"></textarea>
-              </div>
-              <div class="field" style="margin-bottom:0">
-                <label for="stCkBItems">오른쪽 항목 <span class="muted" style="font-weight:500">(한 줄에 하나)</span></label>
-                <textarea id="stCkBItems" placeholder="관계의미학&#10;기호&#10;리피" style="min-height:96px"></textarea>
-              </div>
-            </div>
-            <p class="hint" style="margin-top:9px">제목 → 큰 제목 · 위 <b>한 줄 요약</b> → 그 위 작은 문구로 들어가요</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-head">
-            <h2><span class="hd-ic peach"><svg class="ic"><use href="#i-frame"></use></svg></span>미리보기</h2>
-            <span class="sub">1080 × 1350</span>
-          </div>
-          <div class="cv-box"><canvas id="cv" width="1080" height="1350" aria-label="카드뉴스 미리보기"></canvas></div>
-          <p class="cv-note">인스타 피드 4:5 비율 · 보이는 그대로 PNG로 저장돼요</p>
-          <button class="btn btn-mint btn-block" id="stSave" style="margin-top:11px"><svg class="ic"><use href="#i-down"></use></svg>이미지 저장하기</button>
-          <div class="st-result" id="stResult" hidden>
-            <img id="stResultImg" alt="완성된 카드뉴스">
-            <p class="meta" id="stResultMeta"></p>
-            <p class="hint" id="stResultHint">아이폰은 아래 이미지를 <b>길게 눌러</b> '사진에 저장'을 골라 주세요</p>
-            <div class="btn-row" style="margin-top:9px">
-              <button class="btn btn-ghost btn-sm" id="stShare" hidden><svg class="ic"><use href="#i-up"></use></svg>공유 시트</button>
-              <a class="btn btn-ghost btn-sm" id="stDl" href="#" download>다운로드</a>
+              <label for="stCkBItems">오른쪽 항목 <span class="muted" style="font-weight:500">(한 줄에 하나)</span></label>
+              <textarea id="stCkBItems" placeholder="관계의미학&#10;기호&#10;리피" style="min-height:96px"></textarea>
             </div>
           </div>
-        </div>
-      </div>
-      <!-- ---------- media kit ---------- -->
-      <div id="rc-kit" hidden>
-        <div class="kit-hero">
-          <span class="lbl"><svg class="ic"><use href="#i-idcard"></use></svg>도토리하루 미디어 킷 · 포트폴리오 명함</span>
-          <p class="kit-sum" id="kitSum">숫자가 쌓이면 카드에 자동으로 담겨요</p>
-          <div class="kit-facts" id="kitFacts"></div>
-        </div>
-
-        <div class="card">
-          <div class="card-head">
-            <h2><span class="hd-ic peach"><svg class="ic"><use href="#i-note"></use></svg></span>카드에 담을 내용</h2>
-            <span class="sub" id="kitAutoNote"></span>
-          </div>
-          <div class="field">
-            <label for="kitTagline">한 줄 소개</label>
-            <input type="text" id="kitTagline" placeholder="충남 아산 · 여행 · 카페 · 맛집 기록" autocomplete="off">
-          </div>
-          <div class="field">
-            <label>주력 카테고리 <span class="muted" style="font-weight:500">(눌러서 빼고 더하기)</span></label>
-            <div class="chips" id="kitCats"></div>
-          </div>
-          <div class="field" style="margin-bottom:0">
-            <label>대표 글 <span class="muted" style="font-weight:500">(최대 3개)</span></label>
-            <input type="text" id="kitPost1" placeholder="예: 순천 1박 2일 뚜벅이 여행" autocomplete="off">
-            <input type="text" id="kitPost2" placeholder="두 번째 대표 글" autocomplete="off">
-            <input type="text" id="kitPost3" placeholder="세 번째 대표 글" autocomplete="off">
-            <div class="kit-pickrow">
-              <select id="kitPick" aria-label="최근 발행 글에서 고르기">
-                <option value="">최근 발행 글에서 고르기</option>
-              </select>
-              <button class="btn btn-ghost btn-sm" id="kitAuto3">최신 3편</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-head">
-            <h2><span class="hd-ic butter"><svg class="ic"><use href="#i-frame"></use></svg></span>미디어 킷 미리보기</h2>
-            <span class="sub">1080 × 1350</span>
-          </div>
-          <div class="cv-box"><canvas id="kitCv" width="1080" height="1350" aria-label="미디어 킷 미리보기"></canvas></div>
-          <p class="cv-note">크림·파스텔 에디토리얼 카드 · 보이는 그대로 PNG로 저장돼요</p>
-          <button class="btn btn-mint btn-block" id="kitSave" style="margin-top:11px"><svg class="ic"><use href="#i-down"></use></svg>미디어 킷 PNG 저장</button>
-          <div class="st-result" id="kitResult" hidden>
-            <img id="kitResultImg" alt="완성된 미디어 킷">
-            <p class="meta" id="kitResultMeta"></p>
-            <p class="hint" id="kitResultHint">아이폰은 아래 이미지를 <b>길게 눌러</b> 사진에 저장을 골라 주세요</p>
-            <div class="btn-row" style="margin-top:9px">
-              <button class="btn btn-ghost btn-sm" id="kitShare" hidden><svg class="ic"><use href="#i-up"></use></svg>공유 시트</button>
-              <a class="btn btn-ghost btn-sm" id="kitDl" href="#" download>다운로드</a>
-            </div>
-          </div>
+          <p class="hint" style="margin-top:9px">제목 → 큰 제목 · 위 <b>한 줄 요약</b> → 그 위 작은 문구로 들어가요</p>
         </div>
       </div>
 
-      <!-- ---------- 리뷰노트 · 체험단 신청 한마디 ---------- -->
-      <div id="rc-pitch" hidden>
-        <div class="pt-hero">
-          <span class="lbl"><svg class="ic"><use href="#i-sparkle"></use></svg>리뷰노트 · 체험단 신청 한마디</span>
-          <p class="pt-sum" id="ptSum">카테고리를 고르면 신청 문구가 바로 나와요</p>
+      <div class="card">
+        <div class="card-head">
+          <h2><span class="hd-ic peach"><svg class="ic"><use href="#i-frame"></use></svg></span>미리보기</h2>
+          <span class="sub">1080 × 1350</span>
         </div>
+        <div class="cv-box"><canvas id="cv" width="1080" height="1350" aria-label="카드뉴스 미리보기"></canvas></div>
+        <p class="cv-note">인스타 피드 4:5 비율 · 보이는 그대로 PNG로 저장돼요</p>
+        <button class="btn btn-mint btn-block" id="stSave" style="margin-top:11px"><svg class="ic"><use href="#i-down"></use></svg>이미지 저장하기</button>
+        <div class="st-result" id="stResult" hidden>
+          <img id="stResultImg" alt="완성된 카드뉴스">
+          <p class="meta" id="stResultMeta"></p>
+          <p class="hint" id="stResultHint">아이폰은 아래 이미지를 <b>길게 눌러</b> '사진에 저장'을 골라 주세요</p>
+          <div class="btn-row" style="margin-top:9px">
+            <button class="btn btn-ghost btn-sm" id="stShare" hidden><svg class="ic"><use href="#i-up"></use></svg>공유 시트</button>
+            <a class="btn btn-ghost btn-sm" id="stDl" href="#" download>다운로드</a>
+          </div>
+        </div>
+      </div>
+      </div>
 
-        <div class="card">
-          <div class="card-head"><h2><span class="hd-ic peach"><svg class="ic"><use href="#i-leaf"></use></svg></span>어떤 체험인가요</h2></div>
-          <div class="chips" id="ptCatChips"></div>
-          <div class="field" style="margin-top:14px">
-            <label>내 강점 <span class="muted" style="font-weight:500">(눌러서 켜고 끄기)</span></label>
-            <div class="chips" id="ptStrengthChips"></div>
-          </div>
-          <div class="field" style="margin-bottom:2px">
-            <label for="ptGoal">한 줄 각오 <span class="muted" style="font-weight:500">(선택)</span></label>
-            <input type="text" id="ptGoal" placeholder="예: 매장 분위기와 메뉴를 꼼꼼히 담아 소개하겠습니다" autocomplete="off">
-          </div>
-        </div>
+      <!-- 효자 키워드 + 발행 전 체크 -->
+      <div id="post-kwcheck" hidden>
+      <div class="kw-hero">
+        <p class="kw-sum" id="kwSum">공들인 글의 키워드와 순위를 적어 두면 효자 키워드가 보여요</p>
+      </div>
 
-        <div class="card">
-          <div class="card-head">
-            <h2><span class="hd-ic"><svg class="ic"><use href="#i-note"></use></svg></span>짧은 버전</h2>
-            <button class="copy-mini" id="ptShortCopy"><svg class="ic ic-xs"><use href="#i-copy"></use></svg>복사</button>
-          </div>
-          <textarea id="ptShort" class="pt-out"></textarea>
-          <p class="hint" style="margin-top:9px">리뷰노트·신청란에 그대로 붙여 넣는 1~2줄 버전이에요</p>
+      <div class="card">
+        <div class="card-head">
+          <h2><span class="hd-ic"><svg class="ic"><use href="#i-trend"></use></svg></span>노트</h2>
+          <span class="sub" id="kwCount"></span>
         </div>
+        <div id="kwList"></div>
+      </div>
 
-        <div class="card">
-          <div class="card-head">
-            <h2><span class="hd-ic butter"><svg class="ic"><use href="#i-sparkle"></use></svg></span>정성 버전</h2>
-            <button class="copy-mini" id="ptLongCopy"><svg class="ic ic-xs"><use href="#i-copy"></use></svg>복사</button>
-          </div>
-          <textarea id="ptLong" class="pt-out" style="min-height:330px"></textarea>
-          <p class="hint" style="margin-top:9px">숙소·협찬 제안 메일이나 DM에 쓰는 버전이에요 · 별표 없는 깔끔한 텍스트</p>
+      <div class="card" id="kwFormCard">
+        <div class="card-head">
+          <h2><span class="hd-ic peach"><svg class="ic"><use href="#i-plus"></use></svg></span><span id="kwFormTitle">키워드 추가</span></h2>
+          <span class="sub" id="kwFormMode"></span>
         </div>
+        <div class="field">
+          <label for="kwKey">타겟 키워드</label>
+          <input type="text" id="kwKey" placeholder="예: 천안 카페 추천" autocomplete="off">
+        </div>
+        <div class="two-col">
+          <div class="field" style="margin-bottom:12px">
+            <label for="kwRank">네이버 검색 순위</label>
+            <input type="number" class="input-num" id="kwRank" inputmode="numeric" placeholder="예: 3">
+          </div>
+          <div class="field" style="margin-bottom:12px">
+            <label for="kwDate">확인한 날</label>
+            <input type="date" id="kwDate">
+          </div>
+        </div>
+        <div class="field">
+          <label for="kwPost">공들인 글 <span class="muted" style="font-weight:500">(선택)</span></label>
+          <input type="text" id="kwPost" placeholder="글 제목이나 링크" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="kwMemo">유입 메모 <span class="muted" style="font-weight:500">(선택)</span></label>
+          <textarea id="kwMemo" placeholder="예: 발행 3일 만에 1위, 하루 유입 40명"></textarea>
+        </div>
+        <div class="btn-row">
+          <button class="btn btn-ghost" id="kwCancel" hidden>취소</button>
+          <button class="btn btn-mint" id="kwSave"><svg class="ic"><use href="#i-plus"></use></svg>노트 저장</button>
+        </div>
+        <p class="hint" style="margin-top:10px">순위는 1~30위만 적어도 돼요 · 못 찾으면 비워 두면 순위 밖으로 남아요</p>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <h2><span class="hd-ic"><svg class="ic"><use href="#i-check"></use></svg></span>발행 체크리스트</h2>
+          <button class="copy-mini" id="checkReset">초기화</button>
+        </div>
+        <div class="progress"><div class="bar"><i id="checkBar" style="width:0%"></i></div><span id="checkPct">0/0</span></div>
+        <div id="checkList"></div>
+      </div>
+      </div>
+    </section>
+
+    <!-- ================= TAB 3 : 체험단 ================= -->
+    <section id="panel-collab" class="panel" hidden>
+      <div class="tab-head">
+        <span class="th-ic"><svg class="ic"><use href="#i-leaf"></use></svg></span>
+        <div class="th-txt">
+          <h2 class="th-title">체험단</h2>
+          <p class="th-sub">협찬 총금액 · 포트폴리오 · 신청 멘트</p>
+        </div>
+      </div>
+      <div class="seg" id="collabSeg">
+        <button class="is-on" data-collab="sponsor">협찬 기록</button>
+        <button data-collab="kit">미디어 킷</button>
+        <button data-collab="pitch">신청 멘트</button>
+      </div>
+
+      <!-- 협찬 · 협업 기록 -->
+      <div id="collab-sponsor">
+      <div class="sp-hero">
+        <span class="lbl"><svg class="ic"><use href="#i-leaf"></use></svg>협찬 총금액</span>
+        <div class="sp-total"><b id="spTotal">0</b><span>원</span></div>
+        <p class="sp-total-sub" id="spTotalSub">아직 기록이 없어요</p>
+        <div class="sp-cats" id="spCats"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <h2><span class="hd-ic"><svg class="ic"><use href="#i-note"></use></svg></span>협찬 목록</h2>
+          <button class="copy-mini" id="spCsv"><svg class="ic ic-xs"><use href="#i-down"></use></svg>CSV</button>
+        </div>
+        <div class="chips" id="spFilter" style="margin-bottom:12px"></div>
+        <div id="spList"></div>
+      </div>
+
+      <div class="card" id="spFormCard">
+        <div class="card-head">
+          <h2><span class="hd-ic peach"><svg class="ic"><use href="#i-plus"></use></svg></span><span id="spFormTitle">협찬 추가</span></h2>
+          <span class="sub" id="spFormMode"></span>
+        </div>
+        <div class="field">
+          <label for="spName">항목명 (매장 · 숙소 · 제품)</label>
+          <input type="text" id="spName" placeholder="예: 신부동 브런치집 / 강릉 오션뷰 스테이" autocomplete="off">
+        </div>
+        <div class="two-col">
+          <div class="field" style="margin-bottom:12px">
+            <label for="spDate">다녀온 날</label>
+            <input type="date" id="spDate">
+          </div>
+          <div class="field" style="margin-bottom:12px">
+            <label for="spAmount">협찬 금액 (원)</label>
+            <input type="number" class="input-num" id="spAmount" inputmode="numeric" placeholder="0">
+          </div>
+        </div>
+        <div class="field">
+          <label>카테고리</label>
+          <div class="chips" id="spCatChips"></div>
+        </div>
+        <div class="field">
+          <label>상태</label>
+          <div class="chips" id="spStatusChips"></div>
+        </div>
+        <div class="field">
+          <label for="spNote">메모</label>
+          <textarea id="spNote" placeholder="제공 내역, 리뷰 마감일, 링크 등"></textarea>
+        </div>
+        <div class="btn-row">
+          <button class="btn btn-ghost" id="spCancel" hidden>취소</button>
+          <button class="btn btn-mint" id="spSave"><svg class="ic"><use href="#i-plus"></use></svg>기록 저장</button>
+        </div>
+        <p class="hint" style="margin-top:10px">금액은 0원으로 두고 나중에 채워도 돼요 · CSV는 엑셀에서 그대로 열려요</p>
+      </div>
+      </div>
+
+      <!-- 미디어 킷 -->
+      <div id="collab-kit" hidden>
+      <div class="kit-hero">
+        <p class="kit-sum" id="kitSum">숫자가 쌓이면 카드에 자동으로 담겨요</p>
+        <div class="kit-facts" id="kitFacts"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <h2><span class="hd-ic peach"><svg class="ic"><use href="#i-note"></use></svg></span>카드에 담을 내용</h2>
+          <span class="sub" id="kitAutoNote"></span>
+        </div>
+        <div class="field">
+          <label for="kitTagline">한 줄 소개</label>
+          <input type="text" id="kitTagline" placeholder="충남 아산 · 여행 · 카페 · 맛집 기록" autocomplete="off">
+        </div>
+        <div class="field">
+          <label>주력 카테고리 <span class="muted" style="font-weight:500">(눌러서 빼고 더하기)</span></label>
+          <div class="chips" id="kitCats"></div>
+        </div>
+        <div class="field" style="margin-bottom:0">
+          <label>대표 글 <span class="muted" style="font-weight:500">(최대 3개)</span></label>
+          <input type="text" id="kitPost1" placeholder="예: 순천 1박 2일 뚜벅이 여행" autocomplete="off">
+          <input type="text" id="kitPost2" placeholder="두 번째 대표 글" autocomplete="off">
+          <input type="text" id="kitPost3" placeholder="세 번째 대표 글" autocomplete="off">
+          <div class="kit-pickrow">
+            <select id="kitPick" aria-label="최근 발행 글에서 고르기">
+              <option value="">최근 발행 글에서 고르기</option>
+            </select>
+            <button class="btn btn-ghost btn-sm" id="kitAuto3">최신 3편</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <h2><span class="hd-ic butter"><svg class="ic"><use href="#i-frame"></use></svg></span>미디어 킷 미리보기</h2>
+          <span class="sub">1080 × 1350</span>
+        </div>
+        <div class="cv-box"><canvas id="kitCv" width="1080" height="1350" aria-label="미디어 킷 미리보기"></canvas></div>
+        <p class="cv-note">크림·파스텔 에디토리얼 카드 · 보이는 그대로 PNG로 저장돼요</p>
+        <button class="btn btn-mint btn-block" id="kitSave" style="margin-top:11px"><svg class="ic"><use href="#i-down"></use></svg>미디어 킷 PNG 저장</button>
+        <div class="st-result" id="kitResult" hidden>
+          <img id="kitResultImg" alt="완성된 미디어 킷">
+          <p class="meta" id="kitResultMeta"></p>
+          <p class="hint" id="kitResultHint">아이폰은 아래 이미지를 <b>길게 눌러</b> 사진에 저장을 골라 주세요</p>
+          <div class="btn-row" style="margin-top:9px">
+            <button class="btn btn-ghost btn-sm" id="kitShare" hidden><svg class="ic"><use href="#i-up"></use></svg>공유 시트</button>
+            <a class="btn btn-ghost btn-sm" id="kitDl" href="#" download>다운로드</a>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <!-- 신청 멘트 -->
+      <div id="collab-pitch" hidden>
+      <div class="pt-hero">
+        <p class="pt-sum" id="ptSum">카테고리를 고르면 신청 문구가 바로 나와요</p>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h2><span class="hd-ic peach"><svg class="ic"><use href="#i-leaf"></use></svg></span>어떤 체험인가요</h2></div>
+        <div class="chips" id="ptCatChips"></div>
+        <div class="field" style="margin-top:14px">
+          <label>내 강점 <span class="muted" style="font-weight:500">(눌러서 켜고 끄기)</span></label>
+          <div class="chips" id="ptStrengthChips"></div>
+        </div>
+        <div class="field" style="margin-bottom:2px">
+          <label for="ptGoal">한 줄 각오 <span class="muted" style="font-weight:500">(선택)</span></label>
+          <input type="text" id="ptGoal" placeholder="예: 매장 분위기와 메뉴를 꼼꼼히 담아 소개하겠습니다" autocomplete="off">
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <h2><span class="hd-ic"><svg class="ic"><use href="#i-note"></use></svg></span>짧은 버전</h2>
+          <button class="copy-mini" id="ptShortCopy"><svg class="ic ic-xs"><use href="#i-copy"></use></svg>복사</button>
+        </div>
+        <textarea id="ptShort" class="pt-out"></textarea>
+        <p class="hint" style="margin-top:9px">리뷰노트·신청란에 그대로 붙여 넣는 1~2줄 버전이에요</p>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <h2><span class="hd-ic butter"><svg class="ic"><use href="#i-sparkle"></use></svg></span>정성 버전</h2>
+          <button class="copy-mini" id="ptLongCopy"><svg class="ic ic-xs"><use href="#i-copy"></use></svg>복사</button>
+        </div>
+        <textarea id="ptLong" class="pt-out" style="min-height:330px"></textarea>
+        <p class="hint" style="margin-top:9px">숙소·협찬 제안 메일이나 DM에 쓰는 버전이에요 · 별표 없는 깔끔한 텍스트</p>
+      </div>
+      </div>
+    </section>
+
+    <!-- ================= TAB 4 : 재활용 ================= -->
+    <section id="panel-reuse" class="panel" hidden>
+      <div class="tab-head">
+        <span class="th-ic"><svg class="ic"><use href="#i-remake"></use></svg></span>
+        <div class="th-txt">
+          <h2 class="th-title">재활용</h2>
+          <p class="th-sub">다시 쓸 글 고르기 · 만들기는 포스팅 탭</p>
+        </div>
+      </div>
+      <div id="reuse-board">
+      <div class="rc-hero">
+        <p class="rc-sum" id="rcSum">아직 등록된 글이 없어요</p>
+        <div class="rc-bar"><i id="rcBar" style="width:0%"></i></div>
+        <div class="rc-types" id="rcTypes"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <h2><span class="hd-ic"><svg class="ic"><use href="#i-remake"></use></svg></span>재활용 목록</h2>
+          <span class="sub" id="rcCount"></span>
+        </div>
+        <div class="rc-search">
+          <svg class="ic"><use href="#i-search"></use></svg>
+          <input type="text" id="rcSearch" placeholder="제목으로 찾기 (예: 순천, 다이소)" autocomplete="off">
+        </div>
+        <div id="rcList"></div>
+        <button class="btn btn-ghost btn-sm btn-block" id="rcMore" style="margin-top:8px" hidden>더 보기</button>
+        <button class="btn btn-ghost btn-sm btn-block" id="rcRestore" style="margin-top:8px" hidden>숨긴 자동 글 되돌리기</button>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <h2><span class="hd-ic peach"><svg class="ic"><use href="#i-plus"></use></svg></span>발행한 글 등록</h2>
+          <span class="sub" id="rcAutoNote"></span>
+        </div>
+        <div class="field">
+          <label for="rcTitle">글 제목</label>
+          <input type="text" id="rcTitle" placeholder="예: 순천 1박 2일 뚜벅이 총정리" autocomplete="off">
+        </div>
+        <div class="two-col">
+          <div class="field" style="margin-bottom:11px">
+            <label for="rcDate">발행일</label>
+            <input type="date" id="rcDate">
+          </div>
+          <div class="field" style="margin-bottom:11px">
+            <label for="rcLink">링크 · 메모</label>
+            <input type="text" id="rcLink" placeholder="blog.naver.com/..." autocomplete="off">
+          </div>
+        </div>
+        <button class="btn btn-mint btn-block" id="rcAdd"><svg class="ic"><use href="#i-plus"></use></svg>보드에 추가</button>
+        <p class="hint" style="margin-top:10px">제목만 있어도 추가돼요 · 카드뉴스·스레드·릴스는 누를 때마다 바로 저장됩니다</p>
+      </div>
       </div>
     </section>
   </main>
 
   <p class="foot-sprout"><svg class="ic"><use href="#i-sprout"></use></svg></p>
-  <p class="footer-note">도토리하루 매니저 v1.4 · 기록은 이 기기 브라우저에만 저장돼요</p>
+  <p class="footer-note">도토리하루 매니저 v1.5 · 기록은 이 기기 브라우저에만 저장돼요</p>
 </div>
 
 <nav class="tabbar">
   <div class="tabbar-inner">
-    <button class="tab-btn is-active" data-tab="tracker"><svg class="ic"><use href="#i-trend"></use></svg>성장 트래커</button>
-    <button class="tab-btn" data-tab="generator"><svg class="ic"><use href="#i-pencil"></use></svg>제목·태그</button>
-    <button class="tab-btn" data-tab="more"><svg class="ic"><use href="#i-check"></use></svg>체크·캡션</button>
-    <button class="tab-btn" data-tab="recycle"><svg class="ic"><use href="#i-idcard"></use></svg>포트폴리오</button>
+    <button class="tab-btn is-active" data-tab="growth"><svg class="ic"><use href="#i-trend"></use></svg>성장</button>
+    <button class="tab-btn" data-tab="posting"><svg class="ic"><use href="#i-pencil"></use></svg>포스팅</button>
+    <button class="tab-btn" data-tab="collab"><svg class="ic"><use href="#i-leaf"></use></svg>체험단</button>
+    <button class="tab-btn" data-tab="reuse"><svg class="ic"><use href="#i-remake"></use></svg>재활용</button>
   </div>
 </nav>
 
@@ -1640,7 +1642,8 @@
     posts: 'dotori.posts.v1',
     hidden: 'dotori.hiddenAuto.v1',
     tab: 'dotori.tab.v1',
-    more: 'dotori.more.v1',
+    postSeg: 'dotori.postSeg.v1',
+    collabSeg: 'dotori.collabSeg.v1',
     recycle: 'dotori.recycle.v1',
     rcHidden: 'dotori.recycleHidden.v1',
     rcSeg: 'dotori.recycleSeg.v1',
@@ -1648,8 +1651,7 @@
     lock: 'dotori.lock.v1',
     kit: 'dotori.mediakit.v1',
     pitch: 'dotori.pitch.v1',
-    kw: 'dotori.keywords.v1',
-    genSeg: 'dotori.generatorSeg.v1'
+    kw: 'dotori.keywords.v1'
   };
   function readLS(key, fallback){
     try {
@@ -2740,7 +2742,6 @@
     renderPointChips();
     renderTitles();
     renderTags();
-    renderMiniCheck();
   }
 
   $('#catChips').addEventListener('click', e => {
@@ -2751,7 +2752,6 @@
     renderCatChips();
     renderTitles();
     renderTags();
-    renderMiniCheck();
   });
 
   $('#pointChips').addEventListener('click', e => {
@@ -2798,22 +2798,6 @@
   $('#copyTags').addEventListener('click', () => {
     copyText($('#tagBox').getAttribute('data-tagtext') || '');
   });
-
-  /* ---------- mini checklist (tab 2) ---------- */
-  const MINI = [
-    '한 줄 15~20자로 끊고 단락마다 빈 줄 넣기',
-    '소제목 15pt 볼드, 본문은 나눔스퀘어 11pt',
-    '이모티콘은 한 곳에 하나씩만',
-    '온점 대신 ~더라구요체, 별표 금지',
-    '엔딩 5단계 순서 지키기'
-  ];
-  function renderMiniCheck(){
-    $('#miniCheck').innerHTML = MINI.map((m, i) =>
-      '<div class="check-item" style="border-bottom:' + (i === MINI.length - 1 ? '0' : '1.5px dashed #F4EEDF') + '">' +
-        '<span class="box" style="background:var(--mint-soft);border-color:#CDEDDD;color:#3E7E64;font-size:11px">' + (i + 1) + '</span>' +
-        '<span class="lab">' + m + '</span></div>'
-    ).join('');
-  }
 
   /* ---------- checklist ---------- */
   const CHECK_GROUPS = [
@@ -3447,27 +3431,27 @@
     toast('숨긴 자동 글을 다시 보여드릴게요');
   });
 
-  function showRc(name){
-    const target = ['board', 'studio', 'kit', 'pitch'].indexOf(name) >= 0 ? name : 'board';
-    ['board', 'studio', 'kit', 'pitch'].forEach(n => { $('#rc-' + n).hidden = n !== target; });
-    $$('#rcSeg button').forEach(b => b.classList.toggle('is-on', b.getAttribute('data-rc') === target));
-    writeLS(KEY.rcSeg, target, true);
+  function showPosting(name){
+    const target = ['tag', 'caption', 'cardnews', 'kwcheck'].indexOf(name) >= 0 ? name : 'tag';
+    ['tag', 'caption', 'cardnews', 'kwcheck'].forEach(n => { $('#post-' + n).hidden = n !== target; });
+    $$('#postSeg button').forEach(b => b.classList.toggle('is-on', b.getAttribute('data-post') === target));
+    writeLS(KEY.postSeg, target, true);
     window.scrollTo(0, 0);
   }
-  $$('#rcSeg button').forEach(b => {
-    b.addEventListener('click', () => showRc(b.getAttribute('data-rc')));
+  $$('#postSeg button').forEach(b => {
+    b.addEventListener('click', () => showPosting(b.getAttribute('data-post')));
   });
 
-  /* ---------- 제목·태그 / 효자 키워드 세그먼트 ---------- */
-  function showGen(name){
-    const target = name === 'keyword' ? 'keyword' : 'tag';
-    ['tag', 'keyword'].forEach(n => { $('#gen-' + n).hidden = n !== target; });
-    $$('#genSeg button').forEach(b => b.classList.toggle('is-on', b.getAttribute('data-gen') === target));
-    writeLS(KEY.genSeg, target, true);
+  /* ---------- 체험단 : 협찬 기록 / 미디어 킷 / 신청 멘트 ---------- */
+  function showCollab(name){
+    const target = ['sponsor', 'kit', 'pitch'].indexOf(name) >= 0 ? name : 'sponsor';
+    ['sponsor', 'kit', 'pitch'].forEach(n => { $('#collab-' + n).hidden = n !== target; });
+    $$('#collabSeg button').forEach(b => b.classList.toggle('is-on', b.getAttribute('data-collab') === target));
+    writeLS(KEY.collabSeg, target, true);
     window.scrollTo(0, 0);
   }
-  $$('#genSeg button').forEach(b => {
-    b.addEventListener('click', () => showGen(b.getAttribute('data-gen')));
+  $$('#collabSeg button').forEach(b => {
+    b.addEventListener('click', () => showCollab(b.getAttribute('data-collab')));
   });
 
   /* ================= 미니 카드뉴스 메이커 (Canvas 1080×1350) ================= */
@@ -5283,23 +5267,17 @@
   });
 
   /* ---------- tabs ---------- */
+  const TABS = ['growth', 'posting', 'collab', 'reuse'];
+  const TAB_ALIAS = { tracker: 'growth', generator: 'posting', more: 'posting', recycle: 'reuse' };
   function showTab(name){
-    $$('.panel').forEach(p => { p.hidden = p.id !== 'panel-' + name; });
-    $$('.tab-btn').forEach(b => b.classList.toggle('is-active', b.getAttribute('data-tab') === name));
-    writeLS(KEY.tab, name, true);
+    const target = TABS.indexOf(name) >= 0 ? name : 'growth';
+    $$('.panel').forEach(p => { p.hidden = p.id !== 'panel-' + target; });
+    $$('.tab-btn').forEach(b => b.classList.toggle('is-active', b.getAttribute('data-tab') === target));
+    writeLS(KEY.tab, target, true);
     window.scrollTo(0, 0);
   }
   $$('.tab-btn').forEach(b => {
     b.addEventListener('click', () => showTab(b.getAttribute('data-tab')));
-  });
-
-  function showMore(name){
-    ['caption', 'check', 'sponsor'].forEach(n => { $('#more-' + n).hidden = n !== name; });
-    $$('#moreSeg button').forEach(b => b.classList.toggle('is-on', b.getAttribute('data-more') === name));
-    writeLS(KEY.more, name, true);
-  }
-  $$('#moreSeg button').forEach(b => {
-    b.addEventListener('click', () => showMore(b.getAttribute('data-more')));
   });
 
   /* ---------- boot ---------- */
@@ -5327,13 +5305,11 @@
   stLoadFonts();
   $('#rcDate').value = TODAY;
 
-  const savedTab = readLS(KEY.tab, 'tracker');
-  showTab(['tracker', 'generator', 'more', 'recycle'].indexOf(savedTab) >= 0 ? savedTab : 'tracker');
-  const savedMore = readLS(KEY.more, 'caption');
-  showMore(['caption', 'check', 'sponsor'].indexOf(savedMore) >= 0 ? savedMore : 'caption');
-  const savedRc = readLS(KEY.rcSeg, 'board');
-  showRc(savedRc);
-  showGen(readLS(KEY.genSeg, 'tag'));
+  const savedTabRaw = readLS(KEY.tab, 'growth');
+  const savedTab = TAB_ALIAS[savedTabRaw] || savedTabRaw;
+  showTab(TABS.indexOf(savedTab) >= 0 ? savedTab : 'growth');
+  showPosting(readLS(KEY.postSeg, 'tag'));
+  showCollab(readLS(KEY.collabSeg, 'sponsor'));
 
   lockRenderHeader();
   if (lockEnabled()) lockShow();

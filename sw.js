@@ -1,5 +1,5 @@
 /* 도토리하루 매니저 · 오프라인 캐시 (https 에서만 동작) */
-const CACHE = 'dotori-v6';
+const CACHE = 'dotori-v7';
 const ASSETS = ['./', './index.html', './manifest.json', './icon-180.png?v=2', './icon-192.png?v=2', './icon-512.png?v=2'];
 
 self.addEventListener('install', event => {
@@ -17,7 +17,19 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
   const req = event.request;
   if (req.method !== 'GET') return;
-  if (new URL(req.url).origin !== location.origin) return;
+  const url = new URL(req.url);
+  if (url.origin !== location.origin) return;
+
+  if (url.pathname.endsWith('/data.json')) {
+    event.respondWith(
+      fetch(req, { cache: 'no-store' }).then(res => {
+        const copy = res.clone();
+        caches.open(CACHE).then(cache => cache.put(req, copy)).catch(() => {});
+        return res;
+      }).catch(() => caches.match(req))
+    );
+    return;
+  }
 
   event.respondWith(
     caches.match(req).then(hit => {

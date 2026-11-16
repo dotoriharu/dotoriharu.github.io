@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "source": "binifilm",
-  "updatedAt": "2026-11-16T03:30:00+09:00",
+  "updatedAt": "2026-11-17T00:09:17+09:00",
   "blogOpenDate": "2025-04-14",
-  "totalPosts": 753,
+  "totalPosts": 756,
   "records": [
     {
       "date": "2026-11-16",
@@ -14,6 +14,15 @@
     }
   ],
   "posts": [
+    {
+      "date": "2026-11-16",
+      "count": 3,
+      "titles": [
+        "아이폰 고화질 움짤 앱 추천ㅣ블로거 찐추천 GIFdot 기프닷 후기",
+        "진천 은행나무 명소ㅣ백곡저수지 조용한 공원",
+        "11월 Wishlistㅣ겨울 하객룩 10벌 위시리스트 🤍"
+      ]
+    },
     {
       "date": "2026-11-15",
       "count": 1,
@@ -3241,6 +3250,21 @@
     }
   ],
   "postsList": [
+    {
+      "date": "2026-11-16",
+      "title": "11월 Wishlistㅣ겨울 하객룩 10벌 위시리스트 🤍",
+      "link": "https://blog.naver.com/binifilm/224479680297"
+    },
+    {
+      "date": "2026-11-16",
+      "title": "진천 은행나무 명소ㅣ백곡저수지 조용한 공원",
+      "link": "https://blog.naver.com/binifilm/224479257271"
+    },
+    {
+      "date": "2026-11-16",
+      "title": "아이폰 고화질 움짤 앱 추천ㅣ블로거 찐추천 GIFdot 기프닷 후기",
+      "link": "https://blog.naver.com/binifilm/224479073773"
+    },
     {
       "date": "2026-11-15",
       "title": "시골 김장 후기ㅣ배추 뽑기부터 깍두기까지",

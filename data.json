@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "source": "binifilm",
-  "updatedAt": "2026-11-17T00:09:17+09:00",
+  "updatedAt": "2026-11-18T00:00:36+09:00",
   "blogOpenDate": "2025-04-14",
-  "totalPosts": 756,
+  "totalPosts": 758,
   "records": [
     {
       "date": "2026-11-16",
@@ -14,6 +14,14 @@
     }
   ],
   "posts": [
+    {
+      "date": "2026-11-17",
+      "count": 2,
+      "titles": [
+        "진천 카페ㅣ빈티지 감성 안나의 화원",
+        "카카오뱅크 애플페이 등록 방법"
+      ]
+    },
     {
       "date": "2026-11-16",
       "count": 3,
@@ -3250,6 +3258,16 @@
     }
   ],
   "postsList": [
+    {
+      "date": "2026-11-17",
+      "title": "카카오뱅크 애플페이 등록 방법",
+      "link": "https://blog.naver.com/binifilm/224480956623"
+    },
+    {
+      "date": "2026-11-17",
+      "title": "진천 카페ㅣ빈티지 감성 안나의 화원",
+      "link": "https://blog.naver.com/binifilm/224480615551"
+    },
     {
       "date": "2026-11-16",
       "title": "11월 Wishlistㅣ겨울 하객룩 10벌 위시리스트 🤍",

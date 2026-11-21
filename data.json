@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "source": "binifilm",
-  "updatedAt": "2026-11-21T00:00:40+09:00",
+  "updatedAt": "2026-11-22T00:01:31+09:00",
   "blogOpenDate": "2025-04-14",
-  "totalPosts": 765,
+  "totalPosts": 766,
   "records": [
     {
       "date": "2026-11-16",
@@ -14,6 +14,13 @@
     }
   ],
   "posts": [
+    {
+      "date": "2026-11-21",
+      "count": 1,
+      "titles": [
+        "귤의 계절이 왔다"
+      ]
+    },
     {
       "date": "2026-11-20",
       "count": 2,
@@ -3283,6 +3290,11 @@
     }
   ],
   "postsList": [
+    {
+      "date": "2026-11-21",
+      "title": "귤의 계절이 왔다",
+      "link": "https://blog.naver.com/binifilm/224486407609"
+    },
     {
       "date": "2026-11-20",
       "title": "다이소 추천템ㅣ겨울 추천 다이소 기초화장품 마데카21",

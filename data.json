@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "source": "binifilm",
-  "updatedAt": "2026-11-22T00:01:31+09:00",
+  "updatedAt": "2026-11-23T00:00:37+09:00",
   "blogOpenDate": "2025-04-14",
-  "totalPosts": 766,
+  "totalPosts": 767,
   "records": [
     {
       "date": "2026-11-16",
@@ -14,6 +14,13 @@
     }
   ],
   "posts": [
+    {
+      "date": "2026-11-22",
+      "count": 1,
+      "titles": [
+        "아산 탕정역 맛집ㅣ탕정 낙곱새 윤이식당"
+      ]
+    },
     {
       "date": "2026-11-21",
       "count": 1,
@@ -3290,6 +3297,11 @@
     }
   ],
   "postsList": [
+    {
+      "date": "2026-11-22",
+      "title": "아산 탕정역 맛집ㅣ탕정 낙곱새 윤이식당",
+      "link": "https://blog.naver.com/binifilm/224487476592"
+    },
     {
       "date": "2026-11-21",
       "title": "귤의 계절이 왔다",

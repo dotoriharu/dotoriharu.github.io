@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "source": "binifilm",
-  "updatedAt": "2026-11-23T00:00:37+09:00",
+  "updatedAt": "2026-11-24T00:01:07+09:00",
   "blogOpenDate": "2025-04-14",
-  "totalPosts": 767,
+  "totalPosts": 768,
   "records": [
     {
       "date": "2026-11-16",
@@ -14,6 +14,13 @@
     }
   ],
   "posts": [
+    {
+      "date": "2026-11-24",
+      "count": 1,
+      "titles": [
+        "천안 당일치기 코스ㅣ반려견 동반 메가트라움 & 간짜장 맛집 진짬뽕"
+      ]
+    },
     {
       "date": "2026-11-22",
       "count": 1,
@@ -3297,6 +3304,11 @@
     }
   ],
   "postsList": [
+    {
+      "date": "2026-11-24",
+      "title": "천안 당일치기 코스ㅣ반려견 동반 메가트라움 & 간짜장 맛집 진짬뽕",
+      "link": "https://blog.naver.com/binifilm/224489124025"
+    },
     {
       "date": "2026-11-22",
       "title": "아산 탕정역 맛집ㅣ탕정 낙곱새 윤이식당",

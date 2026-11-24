@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "source": "binifilm",
-  "updatedAt": "2026-11-24T18:35:24+09:00",
+  "updatedAt": "2026-11-25T00:01:55+09:00",
   "blogOpenDate": "2025-04-14",
-  "totalPosts": 768,
+  "totalPosts": 769,
   "records": [
     {
       "date": "2026-11-16",
@@ -14,6 +14,13 @@
     }
   ],
   "posts": [
+    {
+      "date": "2026-11-24",
+      "count": 1,
+      "titles": [
+        "안성 맛집ㅣ갈치조림 곤드레밥 금광호수 맛집"
+      ]
+    },
     {
       "date": "2026-11-23",
       "count": 1,
@@ -3304,6 +3311,11 @@
     }
   ],
   "postsList": [
+    {
+      "date": "2026-11-24",
+      "title": "안성 맛집ㅣ갈치조림 곤드레밥 금광호수 맛집",
+      "link": "https://blog.naver.com/binifilm/224490618607"
+    },
     {
       "date": "2026-11-23",
       "title": "천안 당일치기 코스ㅣ반려견 동반 메가트라움 & 간짜장 맛집 진짬뽕",
